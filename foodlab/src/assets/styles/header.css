@@ -1,0 +1,58 @@
+:root {
+  --color-yellow: #ffbe00;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+.navbar {
+  height: 97px;
+  background-color: #ffffff;
+}
+
+.navbar-brand {
+  width: 450px;
+  background-color: var(--color-yellow);
+}
+
+.nav-link {
+  font-family: Roboto;
+  font-weight: 500;
+  color: #2a2a2a;
+}
+
+.nav-link:hover {
+  color: var(--color-yellow);
+}
+
+.logo-img {
+  width: 247px;
+  height: 81px;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .navbar {
+    background-color: var(--color-yellow);
+  }
+
+  .navbar-brand {
+    width: 50px;
+  }
+
+  .nav-link {
+    border-bottom: 1px solid #2a2a2a;
+  }
+
+  .nav-link:last-child {
+    border: none
+  }
+
+  .nav-link:hover {
+    color: none;
+  }
+
+  test:focus {
+    color: var(--color-yellow);
+  }
+}
