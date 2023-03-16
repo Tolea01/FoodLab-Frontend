@@ -9,6 +9,16 @@
   background-color: #ffffff;
 }
 
+.navbar::before {
+  content: '';
+  width: 20%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background-color: #ffbe00;
+  z-index: 1;
+}
+
 .navbar-brand {
   width: 450px;
   background-color: var(--color-yellow);
@@ -27,17 +37,55 @@
 .logo-img {
   width: 247px;
   height: 81px;
+  position: absolute;
+  z-index: 2;
+}
+
+.dotted-circle {
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-yellow);
+  border-radius: 50%;
+  color: #2a2a2a;
+}
+
+.dotted-circle:hover {
+  color: #2a2a2a;
+}
+
+.dotted-circle::before {
+  content: '';
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  border: 2px dotted black;
+  border-radius: 50%;
+  animation: dotted-circle 2s linear infinite;
+}
+
+@keyframes dotted-circle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* --------------------------------------------------------------------------------------------------------------------- */
 
-@media (max-width: 768px) {
-  .navbar {
-    background-color: var(--color-yellow);
-  }
-
+@media(max-width: 992px) {
   .navbar-brand {
     width: 50px;
+  }
+
+  .navbar {
+    background-color: var(--color-yellow);
   }
 
   .nav-link {
@@ -51,8 +99,10 @@
   .nav-link:hover {
     color: none;
   }
+}
 
-  test:focus {
-    color: var(--color-yellow);
+@media(max-width: 576px) {
+  .dotted-circle {
+    display: none;
   }
 }

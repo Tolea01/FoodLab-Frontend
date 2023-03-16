@@ -1,11 +1,14 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Nav from './components/Header/Nav';
+import HomePage from './components/Pages/Home/Home'
+
 
 
 function App() {
   return (
-    <Nav />
+    <>
+      <HomePage />
+    </>
   );
 }
 
