@@ -1,10 +1,10 @@
 import React from 'react';
-import Header from '../../Template/Header/Header'
+import Slider from '../../Slider/Slider';
 
 export default function Home() {
   return (
     <>
-      <Header />
+      <Slider />
     </>
   )
 }

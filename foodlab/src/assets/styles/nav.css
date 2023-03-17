@@ -71,23 +71,6 @@ body {
   animation: dotted-circle 2s linear infinite;
 }
 
-.slider-img {
-  height: 600px;
-  background-size: cover;
-}
-
-.img1 {
-  background-image: url(../img/img-food-1.jpg);
-}
-
-.img2 {
-  background-image: url(../img/img-food-2.jpg);
-}
-
-.img3 {
-  background-image: url(../img/img-food-3.jpg);
-}
-
 @keyframes dotted-circle {
   0% {
     transform: rotate(0deg);

@@ -2,7 +2,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Image from 'react-bootstrap/Image';
-import logo from '../../../assets/img/logoExpressFood.png';
+import logo from '../../assets/img/logoExpressFood.png';
+import '../../assets/styles/nav.css';
 import { AiOutlinePhone } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 

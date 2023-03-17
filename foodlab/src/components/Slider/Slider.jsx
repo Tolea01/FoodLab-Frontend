@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import '../../assets/styles/slider.css';
 
 export default function Slider() {
   return (
