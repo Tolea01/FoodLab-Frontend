@@ -4,9 +4,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import Image from 'react-bootstrap/Image';
 import logo from '../../../assets/img/logoExpressFood.png';
 import { AiOutlinePhone } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 
-function NavBar() {
+export default function NavBar() {
   return (
     <Navbar className='p-0 navbar color-white position-relative' expand='lg' fixed='top'>
       <Container className='p-0 h-100 container-lg' fluid>
@@ -16,12 +17,11 @@ function NavBar() {
         <Navbar.Toggle className='me-2' aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav' className='color-white px-1'>
           <Nav className='mx-auto nav-link text-uppercase'>
-            <Nav.Link href='#home'>Home</Nav.Link>
-            <Nav.Link href='#link'>About</Nav.Link>
-            <Nav.Link href='#link'>Servives</Nav.Link>
-            <Nav.Link href='#link'>Menu</Nav.Link>
-            <Nav.Link href='#link'>Blogs</Nav.Link>
-            <Nav.Link href='#link'>Contacts</Nav.Link>
+            <Nav.Link as={Link} to='/'>Home</Nav.Link>
+            <Nav.Link as={Link} to='/about'>About</Nav.Link>
+            <Nav.Link as={Link} to='/services'>Servives</Nav.Link>
+            <Nav.Link as={Link} to='/menu'>Menu</Nav.Link>
+            <Nav.Link as={Link} to='/contacts'>Contacts</Nav.Link>
           </Nav>
           <a href='tel:+37360873461' className='d-sm-none dotted-circle d-lg-flex justify-content-center align-items-center ms-md-2 ms-xl-0'>
             <AiOutlinePhone size='30px' />
@@ -31,5 +31,3 @@ function NavBar() {
     </Navbar >
   );
 }
-
-export default NavBar;

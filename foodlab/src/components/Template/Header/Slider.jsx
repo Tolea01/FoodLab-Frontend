@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
-function Slider() {
+export default function Slider() {
   return (
     <Carousel indicators={false} controls={false}>
 
@@ -20,5 +20,3 @@ function Slider() {
     </Carousel>
   );
 }
-
-export default Slider;
