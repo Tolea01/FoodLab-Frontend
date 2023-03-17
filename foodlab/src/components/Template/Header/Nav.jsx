@@ -8,13 +8,13 @@ import { AiOutlinePhone } from 'react-icons/ai';
 
 function NavBar() {
   return (
-    <Navbar className='p-0 navbar position-relative' expand='lg'>
-      <Container className='p-0 h-100' >
+    <Navbar className='p-0 navbar color-white position-relative' expand='lg' fixed='top'>
+      <Container className='p-0 h-100 container-lg' fluid>
         <Navbar.Brand className='h-100 ps-2 ps-md-5 navbar-brand' href='#home'>
           <Image className='logo-img' src={logo} />
         </Navbar.Brand>
         <Navbar.Toggle className='me-2' aria-controls='basic-navbar-nav' />
-        <Navbar.Collapse id='basic-navbar-nav'>
+        <Navbar.Collapse id='basic-navbar-nav' className='color-white px-1'>
           <Nav className='mx-auto nav-link text-uppercase'>
             <Nav.Link href='#home'>Home</Nav.Link>
             <Nav.Link href='#link'>About</Nav.Link>
