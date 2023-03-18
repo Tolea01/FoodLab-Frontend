@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+
 .slider-img {
   height: 600px;
   background-size: cover;
@@ -13,4 +15,64 @@
 
 .img3 {
   background-image: url(../img/img-food-3.jpg);
+}
+
+.slider-content {
+  top: 20%;
+  left: 50%;
+  width: 50%;
+}
+
+.input-search {
+  height: 50px;
+  background-color: #ffffff8a;
+  border-radius: 0%;
+  color: #ffffff;
+}
+
+.input-search::placeholder {
+  color: #ffffff;
+}
+
+.input-search:focus {
+  background-color: #ffffff8a;
+  box-shadow: none;
+  border: #ffffff;
+  color: #ffffff;
+}
+
+.slider-search-button {
+  border-radius: 0%;
+  border: none;
+  background-color: #ffbe00;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.slider-search-button:hover {
+  background-color: #ffbe00;
+}
+
+.slider-search-button:focus,
+.slider-search-button:active {
+  background-color: #ffbe00 !important;
+}
+
+.slider-text-container h1 {
+  color: #ffbe00;
+  font-size: 55px;
+  font-weight: 700;
+  font-family: Playfair Display, serif;
+}
+
+.slider-text-container p {
+  width: 50%;
+  font-size: 13px;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+@media(max-width:767px) {
+  .slider-content {
+    width: 70%;
+  }
 }

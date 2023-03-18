@@ -79,7 +79,7 @@ export default function Footer() {
       </Col>
 
       <Col xs={12} md={4} className='d-flex justify-content-center'>
-        <div className='mr-20'>
+        <div className='mr-50'>
           <h3 className='text-uppercase color-yellow mb-3'>open hours</h3>
           <div className='d-flex'>
             <div className="days-of-week">
