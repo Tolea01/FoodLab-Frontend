@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+* {
+  font-family: Roboto;
+}
+
+.explore-button {
+  background: #ffbe00;
+  font-weight: 500;
+}
+
+.explore-button:hover {
+  background-color: #252525;
+  border-color: #252525;
+  color: #ffbe00 !important;
+}
+
+.explore-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  border-radius: 40px;
+  border: 2px dashed black;
+}
+
+.explore-button:hover::before {
+  border-color: #ffbe00;
+}

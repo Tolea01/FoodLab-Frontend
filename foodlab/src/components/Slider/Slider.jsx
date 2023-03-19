@@ -10,7 +10,7 @@ export default function Slider() {
   return (
     <div className="position-relative">
 
-      <Carousel indicators={false} controls={false} interval={5000} pauseOnHover={false}>
+      <Carousel indicators={false} controls={false} interval={5000}>
 
         <Carousel.Item>
           <div className="w-100 slider-img img1" />
@@ -42,13 +42,13 @@ export default function Slider() {
 
         <div className="slider-text-container mt-4">
           <h1 className='text-center'>Welcome The FoodLab</h1>
-          <div className='d-flex justify-content-center'>
+          <div className='slider-text d-flex justify-content-center'>
             <p className=' text-center text-white'>Lorem Ipsum is simply dummy text of the printing and type setting
               industry. Lorem Ipsum has been the industry's</p>
           </div>
         </div>
-        <MainButton></MainButton>
+        <MainButton href='/menu' contentText='Explore' padding='17px 40px' color='#800080' fontSize='25px' borderRadius='41px' />
       </div>
-    </div>
+    </div >
   );
 }
