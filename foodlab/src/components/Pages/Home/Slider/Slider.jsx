@@ -3,27 +3,19 @@ import Carousel from 'react-bootstrap/Carousel';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { BiSearch } from "react-icons/bi";
-import MainButton from '../Template/MainButton';
-import '../../assets/styles/slider.css';
+import MainButton from '../../../Template/MainButton';
+import '../../../../assets/styles/slider.css';
 
 export default function Slider() {
+  const classesWithImages = ['img1', 'img2', 'img3',];
   return (
     <div className="position-relative">
-
       <Carousel indicators={false} controls={false} interval={5000}>
-
-        <Carousel.Item>
-          <div className="w-100 slider-img img1" />
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <div className="w-100 slider-img img2" />
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <div className="w-100 slider-img img3" />
-        </Carousel.Item>
-
+        {classesWithImages.map((image, index) => (
+          <Carousel.Item key={index}>
+            <div className={`w-100 slider-img ${image}`} />
+          </Carousel.Item>
+        ))}
       </Carousel>
 
       <div className="slider-content position-absolute translate-middle-x">
