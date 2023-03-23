@@ -4,6 +4,7 @@
 .left-col {
   background-color: #ffbe00;
   border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
 }
 
 
@@ -21,16 +22,8 @@
   position: absolute;
 }
 
-.food-img {
-  margin-top: 97%;
-  margin-left: -38%;
-  width: 80%;
-  animation: rotate-img 5s linear infinite;
-  animation-fill-mode: both;
-}
-
-.img-rotate {
-  animation: rotate-img 4s linear infinite;
+.cullinary-experience-row {
+  margin-bottom: 11%;
 }
 
 .right-column-text h2 {
@@ -53,18 +46,20 @@
   padding-left: 3.5%;
 }
 
-@keyframes rotate-img {
-  0% {
-    transform: rotate(0deg);
-  }
+.gallery {
+  margin-bottom: 11%;
+}
 
-  50% {
-    transform: rotate(180deg);
-  }
+.cullinary-experience-galery h2 {
+  width: 60%;
+  font-family: Playfair Display, Playfair;
+  font-weight: normal;
+}
 
-  100% {
-    transform: rotate(360deg);
-  }
+.cullinary-experience-img h4 {
+  font-size: 20px;
+  font-family: Roboto;
+  color: #3a3a3a;
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -101,6 +96,10 @@
 
 @media(max-width: 768px) {
   .left-col {
+    width: 100%;
+  }
+
+  .cullinary-experience-galery h2 {
     width: 100%;
   }
 }
