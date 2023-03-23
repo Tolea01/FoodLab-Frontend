@@ -6,19 +6,24 @@
   border-top-right-radius: 80px;
 }
 
+
 .cullinary-experience {
   background-color: #ffffff;
   padding-top: 8%;
 }
 
-.chef-img {
-  margin-left: 20%;
-  width: 100%;
+.cullinary-experience::before {
+  content: '';
+  display: block;
+  width: 30%;
+  height: 488px;
+  background-color: #ffbe00;
+  position: absolute;
 }
 
 .food-img {
   margin-top: 97%;
-  margin-right: 35%;
+  margin-left: -38%;
   width: 80%;
   animation: rotate-img 5s linear infinite;
   animation-fill-mode: both;
@@ -29,7 +34,7 @@
 }
 
 .right-column-text h2 {
-  width: 50%;
+  width: 70%;
   font-family: Playfair Display, Playfair;
   font-weight: normal;
   margin-bottom: 1.5%;
@@ -37,15 +42,15 @@
 
 .right-column-text p {
   font-size: 16px;
-  width: 70%;
+  width: 80%;
   font-family: Roboto;
   font-weight: normal;
   line-height: 25px;
 }
 
 .right-column {
-  padding-top: 10%;
-  margin-left: 50px;
+  padding-top: 5%;
+  padding-left: 3.5%;
 }
 
 @keyframes rotate-img {
@@ -62,8 +67,13 @@
   }
 }
 
-
 /* -------------------------------------------------------------------------------- */
+
+@media(max-width:1400px) {
+  .cullinary-experience::before {
+    height: 418px;
+  }
+}
 
 @media(max-width: 1200px) {
   .container-img2 {
@@ -75,6 +85,22 @@
   }
 
   .right-column-text p {
+    width: 100%;
+  }
+
+  .cullinary-experience::before {
+    height: 491px;
+  }
+}
+
+@media(max-width: 1200px) {
+  .cullinary-experience::before {
+    display: none;
+  }
+}
+
+@media(max-width: 768px) {
+  .left-col {
     width: 100%;
   }
 }
