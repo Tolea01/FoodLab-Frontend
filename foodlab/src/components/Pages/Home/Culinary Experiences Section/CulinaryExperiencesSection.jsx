@@ -23,7 +23,7 @@ export default function CulinaryExperiencesSection() {
             <div className='w-100'>
               <Image src={chefImg} fluid />
             </div>
-            <div className='w-50'>
+            <div className='w-50 img-rotate'>
               <RotatedImage width='80%' marginLeft='-38%' marginTop='97%' img={foodImg} fluid />
             </div>
           </Col>

@@ -90,6 +90,16 @@
 
 @media(max-width: 1200px) {
   .cullinary-experience::before {
+    height: 521px;
+  }
+
+  .img-rotate {
+    display: none;
+  }
+}
+
+@media(max-width:992px) {
+  .cullinary-experience::before {
     display: none;
   }
 }
