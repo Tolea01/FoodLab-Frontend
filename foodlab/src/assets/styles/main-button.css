@@ -5,12 +5,12 @@
 }
 
 .explore-button {
-  background: #ffbe00;
+  border: none;
   font-weight: 500;
 }
 
 .explore-button:hover {
-  background-color: #252525;
+  background-color: #252525 !important;
   border-color: #252525;
   color: #ffbe00 !important;
 }

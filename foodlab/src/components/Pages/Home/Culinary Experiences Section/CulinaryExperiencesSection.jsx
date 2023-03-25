@@ -37,7 +37,7 @@ export default function CulinaryExperiencesSection() {
               </p>
             </div>
             <div className='d-flex align-content-start'>
-              <MainButton contentText='Read More' padding='13px 20px' color='#0b0b0b' fontSize='16px' borderRadius='30px' />
+              <MainButton contentText='Read More' padding='13px 20px' color='#0b0b0b' fontSize='16px' borderRadius='30px' background='#ffbe00' />
             </div>
           </Col>
         </Row>

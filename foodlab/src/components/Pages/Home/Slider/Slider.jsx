@@ -39,7 +39,7 @@ export default function Slider() {
               industry. Lorem Ipsum has been the industry's</p>
           </div>
         </div>
-        <MainButton href='/menu' contentText='Explore' padding='17px 40px' color='#800080' fontSize='25px' borderRadius='41px' />
+        <MainButton href='/menu' contentText='Explore' padding='17px 40px' color='#800080' fontSize='25px' borderRadius='41px' background='#ffbe00' />
       </div>
     </div >
   );

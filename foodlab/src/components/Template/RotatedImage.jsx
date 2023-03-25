@@ -7,6 +7,7 @@ export default function RotatedImage(props) {
     img: {
       width: props.width,
       height: props.height,
+      position: props.position,
       marginLeft: props.marginLeft,
       marginRight: props.marginRight,
       marginTop: props.marginTop,
@@ -14,6 +15,6 @@ export default function RotatedImage(props) {
     }
   }
   return (
-    <Image className='rotated-img' src={props.img} style={styles.img} />
+    <Image fluid className='rotated-img' src={props.img} style={styles.img} />
   )
 }

@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+
+.our-specialties {
+  background-image: url(../img/bg-food.png);
+  /* padding-top: 3.5%; */
+}
+
+.our-specialties h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: calc(33px + 57 * (100vw / 1700));
+  color: #0c0c0c;
+}
+
+.rotate-img {
+  width: 13%;
+  height: 13%;
+}
+
+.mt-5 {
+  margin-top: 5%;
+}
+
+.explore-buttonn::before {
+  border-color: #ffbe00;
+}
+
+.our-specialties-img h6 {
+  font-family: Roboto;
+  font-size: 17px;
+  bottom: 30px;
+  color: #ffbe00;
+}
+
+/* ------------------------------------------------------------------ */
+
+@media(max-width:992px) {
+  .rotate-img {
+    display: none;
+  }
+}
+
+@media(max-width:768px) {
+  .mt-5-sm {
+    margin-top: 5%;
+  }
+}
