@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
+import PageHeader from '../../Template/PageHeader';
 
 export default function Menu() {
   return (
-    <div>Menu</div>
+    <PageHeader textContent='Menu' />
   )
 }
