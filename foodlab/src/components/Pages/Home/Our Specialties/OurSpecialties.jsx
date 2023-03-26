@@ -42,6 +42,8 @@ export default function OurSpecialties() {
                 case 3:
                   text = 'Momo';
                   break;
+                default:
+                  break;
               }
               return (
                 <Col sm={12} md={6} lg={3} className={`position-relative d-flex justify-content-center align-items-center our-specialties-img mt-5-sm ${index % 2 !== 0 ? 'mt-5' : ''}`} key={index}>
@@ -54,28 +56,10 @@ export default function OurSpecialties() {
         </Row >
         <Row>
           <Col className='d-flex mb-5 ms-3'>
-            <MainButton contentText='View All' padding='13px 20px' color='#ffbe00' fontSize='16px' borderRadius='30px' background='#0b0b0b' />
+            <MainButton contentText='View All' padding='13px 20px' color='#ffbe00' fontSize='16px' borderRadius='30px' background='#252525' />
           </Col>
         </Row>
       </Container >
     </section >
   )
 }
-
-
-
-// width='250px' height='250px'
-
-
-{/* <Col>
-<Image className='' fluid src={capoSteakImg} />
-</Col>
-<Col className='mb-5'>
-<Image className='test' fluid src={cauliflowerImg} />
-</Col>
-<Col>
-<Image className='' fluid src={italianoFoodImg} />
-</Col>
-<Col>
-<Image className='test' fluid src={momoImg} />
-</Col > */}
