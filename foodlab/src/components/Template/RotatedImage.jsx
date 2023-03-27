@@ -12,6 +12,10 @@ export default function RotatedImage(props) {
       marginRight: props.marginRight,
       marginTop: props.marginTop,
       marginBottom: props.marginBottom,
+      top: props.top,
+      left: props.left,
+      right: props.right,
+      bottom: props.botom,
     }
   }
   return (
