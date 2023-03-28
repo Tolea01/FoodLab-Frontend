@@ -25,7 +25,39 @@ import service6Icon from '../../../../assets/img/dinning-table.png';
 import '../../../../assets/styles/best-services.css';
 
 export default function BestServices() {
-  const servicesImg = [];
+  const services = [
+    {
+      img: serviceImg1,
+      icon: service1Icon,
+      text: 'Fast Delivery'
+    },
+    {
+      img: serviceImg2,
+      icon: service2Icon,
+      text: 'Various Menu'
+    },
+    {
+      img: serviceImg3,
+      icon: service3Icon,
+      text: 'Discount Voucher'
+    },
+    {
+      img: serviceImg4,
+      icon: service4Icon,
+      text: 'Night Party'
+    },
+    {
+      img: serviceImg5,
+      icon: service5Icon,
+      text: 'Charity Events'
+    },
+    {
+      img: serviceImg6,
+      icon: service6Icon,
+      text: 'Private Dinning'
+    },
+  ];
+
   return (
     <section className='best-services position-relative'>
       <figure className='img-food'>
@@ -56,72 +88,23 @@ export default function BestServices() {
           </Row>
         </div>
         <Row className='mb5'>
-          <Col>
-            <figure className='position-relative'>
-              <Link to='#'>
-                <Image className='position-relative best-service-img' src={serviceImg1} />
-              </Link>
-              <div className="yellow-circle position-absolute d-flex flex-column justify-content-center align-items-center">
-                <Image className='best-service-icon' src={service1Icon} fluid />
-                <h6 className='mt-2 text-center'>Fast Delivery</h6>
-              </div>
-            </figure>
-          </Col>
-          <Col>
-            <figure className='position-relative'>
-              <Link to='#'>
-                <Image className='position-relative best-service-img' src={serviceImg1} />
-              </Link>
-              <div className="yellow-circle position-absolute d-flex flex-column justify-content-center align-items-center">
-                <Image className='best-service-icon' src={service1Icon} fluid />
-                <h6 className='mt-2 text-center'>Fast Delivery</h6>
-              </div>
-            </figure>
-          </Col>
-          <Col>
-            <figure className='position-relative'>
-              <Link to='#'>
-                <Image className='position-relative best-service-img' src={serviceImg1} />
-              </Link>
-              <div className="yellow-circle position-absolute d-flex flex-column justify-content-center align-items-center">
-                <Image className='best-service-icon' src={service1Icon} fluid />
-                <h6 className='mt-2 text-center'>Fast Delivery</h6>
-              </div>
-            </figure>
-          </Col>
-          <Col>
-            <figure className='position-relative'>
-              <Link to='#'>
-                <Image className='position-relative best-service-img' src={serviceImg1} />
-              </Link>
-              <div className="yellow-circle position-absolute d-flex flex-column justify-content-center align-items-center">
-                <Image className='best-service-icon' src={service1Icon} fluid />
-                <h6 className='mt-2 text-center'>Fast Delivery</h6>
-              </div>
-            </figure>
-          </Col>
-          <Col>
-            <figure className='position-relative'>
-              <Link to='#'>
-                <Image className='position-relative best-service-img' src={serviceImg1} />
-              </Link>
-              <div className="yellow-circle position-absolute d-flex flex-column justify-content-center align-items-center">
-                <Image className='best-service-icon' src={service1Icon} fluid />
-                <h6 className='mt-2 text-center'>Fast Delivery</h6>
-              </div>
-            </figure>
-          </Col>
-          <Col>
-            <figure className='position-relative'>
-              <Link to='#'>
-                <Image className='position-relative best-service-img' src={serviceImg1} />
-              </Link>
-              <div className="yellow-circle position-absolute d-flex flex-column justify-content-center align-items-center">
-                <Image className='best-service-icon' src={service1Icon} fluid />
-                <h6 className='mt-2 text-center'>Fast Delivery</h6>
-              </div>
-            </figure>
-          </Col>
+          {
+            services.map((service, index) => {
+              return (
+                <Col key={index}>
+                  <figure className='position-relative'>
+                    <Link to='#'>
+                      <Image className='position-relative best-service-img' src={service.img} />
+                    </Link>
+                    <div className="yellow-circle position-absolute d-flex flex-column justify-content-center align-items-center">
+                      <Image className='best-service-icon' src={service.icon} fluid />
+                      <h6 className='mt-2 text-center yellow-circle-text'>{service.text}</h6>
+                    </div>
+                  </figure>
+                </Col>
+              )
+            })
+          }
         </Row>
       </Container>
     </section >
