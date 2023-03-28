@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+.menu-section {
+  margin-top: 5%;
+  padding-top: 6%;
+  background-image: url(../img/restaurant-interior-\(menu\).jpg);
+  background-size: cover;
+}
+
+.menu-section h2 {
+  font-family: Playfair Display;
+  font-size: calc(33px + 12 * (100vw / 1700));
+  color: #ffbe00;
+}
+
+.menu-section-text-container {
+  margin-bottom: 5%;
+}
+
+.menu-section-text {
+  width: 550px;
+  color: #4a4949;
+  font-family: Roboto;
+  font-size: 19px;
+}
+
+.men-section-card {
+  margin-top: -1%;
+}
+
+.mb10 {
+  margin-bottom: 8%;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+@media(max-width:768px) {
+  .menu-section-figure {
+    display: none;
+  }
+}
+
+@media(max-width:576px) {
+  .menu-section-text {
+    width: 100%;
+  }
+}
