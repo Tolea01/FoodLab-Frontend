@@ -6,11 +6,15 @@
   background-color: #ffffff;
 }
 
+.best-service-text-section {
+  margin-bottom: 5%;
+}
+
 .img-fruit {
   width: 120px;
   height: 120px;
   left: 80px;
-  top: 25%;
+  top: 100px;
   animation: fruit-img 5s alternate infinite;
 }
 
@@ -24,6 +28,56 @@
   color: #4a4949;
   font-family: Roboto;
   font-size: 19px;
+}
+
+.best-service-img {
+  border-radius: 70px;
+  width: 150px;
+  height: 494px;
+}
+
+.yellow-circle {
+  padding: 10px;
+  bottom: 10px;
+  left: 7px;
+  width: 136px;
+  height: 136px;
+  border-radius: 50%;
+  background-color: #ffbe00;
+}
+
+.yellow-circle::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 120px;
+  border: 2px dashed black;
+  border-radius: 50%;
+  animation: rotating-figure 5s linear infinite;
+}
+
+.best-service-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.mb5 {
+  margin-bottom: 5%;
+}
+
+@keyframes rotating-figure {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes fruit-img {
