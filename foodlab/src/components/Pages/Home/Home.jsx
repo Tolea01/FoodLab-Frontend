@@ -4,6 +4,7 @@ import CulinaryExperiencesSection from './Culinary Experiences Section/CulinaryE
 import OurSpecialties from './Our Specialties/OurSpecialties';
 import BestServices from './Best Services/BestServices';
 import MenuSection from './Menu/MenuSection';
+import TableReservationSection from './Table Reservation Section/TableReservationSection';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <OurSpecialties />
       <BestServices />
       <MenuSection />
+      <TableReservationSection />
     </>
   )
 }
