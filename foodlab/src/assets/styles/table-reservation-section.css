@@ -8,3 +8,76 @@
   height: 100%;
   background-image: url('../img/bg-food.png');
 }
+
+.circle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 0;
+  padding-bottom: 50%;
+}
+
+.inner-circle {
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: #ffbe00;
+  background-image: url('../img/chef1-1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.middle-circle {
+  top: 20%;
+  left: 20%;
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  border: 2px dashed #ffbe00;
+  animation: dashed-circle 2s linear infinite;
+}
+
+.outer-circle {
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  border: 2px dashed #ffbe00;
+  animation: dashed-circle 2s linear infinite;
+}
+
+
+
+@keyframes dashed-circle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .circle {
+    width: 80%;
+    padding-bottom: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .circle {
+    width: 60%;
+    padding-bottom: 60%;
+  }
+}

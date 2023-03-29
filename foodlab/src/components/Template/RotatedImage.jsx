@@ -15,7 +15,8 @@ export default function RotatedImage(props) {
       top: props.top,
       left: props.left,
       right: props.right,
-      bottom: props.botom,
+      bottom: props.bottom,
+      zIndex: props.zIndex
     }
   }
   return (
