@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+
+.test {
+  background-color: #ffbe00;
+}
+
+.col-center {
+  padding-top: 5%;
+  padding-left: 12%;
+}
+
+.col-center h6 {
+  color: #ffbe00;
+  font-family: roboto, Sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.col-center h2 {
+  color: #131313;
+  font-family: playfair display, Sans-serif;
+  font-weight: 700;
+}
+
+.col-center h2,
+.col-center h6,
+.col-center p {
+  width: 70%;
+}
+
+.col-center p {
+  color: #171717;
+  font-family: roboto, Sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 29px;
+}
+
+.last-paragraph {
+  margin-bottom: 12%;
+}
+
+.advantage-section {
+  background-color: #ffffff;
+}
