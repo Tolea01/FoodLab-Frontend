@@ -1,35 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
 
-.test {
+.advantage-left-col {
   background-color: #ffbe00;
+  padding-top: 5%;
 }
 
-.col-center {
+.advantage-col-center {
   padding-top: 5%;
   padding-left: 12%;
 }
 
-.col-center h6 {
+.advantage-col-center h6 {
   color: #ffbe00;
   font-family: roboto, Sans-serif;
   font-size: 17px;
   font-weight: 500;
 }
 
-.col-center h2 {
+.advantage-col-center h2 {
   color: #131313;
   font-family: playfair display, Sans-serif;
   font-weight: 700;
 }
 
-.col-center h2,
-.col-center h6,
-.col-center p {
+.advantage-col-center h2,
+.advantage-col-center h6,
+.advantage-col-center p {
   width: 70%;
 }
 
-.col-center p {
+.advantage-col-center p {
   color: #171717;
   font-family: roboto, Sans-serif;
   font-size: 17px;
@@ -38,9 +39,53 @@
 }
 
 .last-paragraph {
-  margin-bottom: 12%;
+  margin-bottom: 13%;
 }
 
 .advantage-section {
   background-color: #ffffff;
+}
+
+.cards {
+  background-color: #2a2a2a;
+  color: #ffbe00;
+}
+
+.cards-img {
+  left: 50%;
+  width: 50%;
+  transform: translateX(-50%);
+}
+
+.cards-title {
+  margin-bottom: 13px;
+  color: #ffbe00;
+  font-family: playfair display, Sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.cards-text {
+  font-family: roboto, Sans-serif;
+  color: #7a7a7a;
+  font-size: 16px;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+@media(max-width: 768px) {
+  .img-r {
+    display: none;
+  }
+
+  .advantage-col-center h2,
+  .advantage-col-center h6,
+  .advantage-col-center p {
+    width: 100%;
+  }
+
+  .advantage-left-col {
+    background-color: #ffffff;
+  }
 }
