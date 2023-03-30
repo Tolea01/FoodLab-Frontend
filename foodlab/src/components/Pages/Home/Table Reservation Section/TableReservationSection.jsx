@@ -15,6 +15,29 @@ import imgPlate4 from '../../../../assets/img/c-6.png';
 import '../../../../assets/styles/table-reservation-section.css';
 
 export default function TableReservationSection() {
+  const positions = [
+    { top: 0, left: 0 },
+    { top: 0, right: 0 },
+    { bottom: 0, left: 0 },
+    { bottom: 0, right: 0 },
+  ]
+
+  const images = [imgPlate1, imgPlate2, imgPlate3, imgPlate4];
+
+  const renderInputs = (typeOfInput, placeholder, text) => {
+    return (
+      <Form.Floating className="mb-4">
+        <Form.Control
+          id="floatingInputCustom"
+          type={typeOfInput}
+          placeholder={placeholder}
+          className='inputs'
+        />
+        <label className='inputs-text' htmlFor="floatingInputCustom">{text}</label>
+      </Form.Floating>
+    )
+  }
+
   return (
     <Container fluid>
       <Row className='reservation-section'>
@@ -24,10 +47,20 @@ export default function TableReservationSection() {
           </div>
           <figure className="circle position-absolute">
             <div className='rotated-image-container'>
-              <RotatedImage zIndex='2' position='absolute' top='0' left='0' width='30%' img={imgPlate1} />
-              <RotatedImage zIndex='2' position='absolute' top='0' right='0' width='30%' img={imgPlate2} />
-              <RotatedImage zIndex='2' position='absolute' bottom='0' left='0' width='30%' img={imgPlate3} />
-              <RotatedImage zIndex='2' position='absolute' bottom='0' right='0' width='30%' img={imgPlate4} />
+              {
+                positions.map((position, index) => {
+                  return (
+                    <RotatedImage
+                      key={index}
+                      zIndex='2'
+                      position='absolute'
+                      {...position}
+                      width='30%'
+                      img={images[index]}
+                    />
+                  )
+                })
+              }
             </div>
             <div className="inner-circle position-absolute"></div>
             <div className="middle-circle position-absolute"></div>
@@ -39,51 +72,23 @@ export default function TableReservationSection() {
             <Row>
               <Col className='reservation-section-form'>
                 <h2 className='mb-3'>Reserve Your Table</h2>
-                <Form.Floating className="mb-4">
-                  <Form.Control
-                    id="floatingInputCustom"
-                    type="text"
-                    placeholder="input your name"
-                  />
-                  <label htmlFor="floatingInputCustom">Name</label>
-                </Form.Floating>
-
-                <Form.Floating className="mb-4">
-                  <Form.Control
-                    id="floatingPasswordCustom"
-                    type="text"
-                    placeholder="input your phone"
-                  />
-                  <label htmlFor="floatingPasswordCustom">Phone</label>
-                </Form.Floating>
-
+                {renderInputs('text', 'input your name', 'Name')}
+                {renderInputs('text', 'input your phone', 'Phone')}
                 <FloatingLabel className='mb-4' controlId="floatingSelect" label="Party Type">
-                  <Form.Select aria-label="Floating label select example">
+                  <Form.Select className='inputs' aria-label="Floating label select example">
                     <option>Select party type</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
+                    <option value="Wedding party">Wedding party</option>
+                    <option value="Christening party">Christening party</option>
+                    <option value=" Birthday party"> Birthday party</option>
+                    <option value="Engagement party">Engagement party</option>
+                    <option value="Graduation party">Graduation party</option>
+                    <option value="Christmas party">Corporate party</option>
                   </Form.Select>
                 </FloatingLabel>
-
-                <Form.Floating className="mb-4">
-                  <Form.Control
-                    id="floatingInputCustom"
-                    type="number"
-                    placeholder="input number of person"
-                  />
-                  <label htmlFor="floatingInputCustom">Person</label>
-                </Form.Floating>
-
-                <Form.Floating className="mb-4">
-                  <Form.Control
-                    id="floatingInputCustom"
-                    type="date"
-                    placeholder="input date"
-                  />
-                  <label htmlFor="floatingInputCustom">Date</label>
-                </Form.Floating>
+                {renderInputs('number', 'input your number', 'Person')}
+                {renderInputs('date', 'input date', 'Date')}
                 <Row>
-                  <Button size='lg' variant="primary" type='submit'>Book Now!</Button>
+                  <Button className='inputs-button' size='lg' variant="primary" type='button'>Book Now!</Button>
                 </Row>
               </Col>
             </Row>

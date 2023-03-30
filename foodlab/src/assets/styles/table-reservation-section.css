@@ -68,6 +68,20 @@
   font-family: Playfair Display;
 }
 
+.inputs {
+  background-color: #e5e6e6;
+  max-height: 55px;
+}
+
+.inputs-text {
+  color: #666;
+  font-size: 14px;
+}
+
+.inputs-button {
+  background-color: #17a8e3;
+}
+
 @keyframes dashed-circle {
   0% {
     transform: rotate(0deg);
@@ -85,18 +99,12 @@
 /* -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
   .circle {
-    width: 80%;
-    padding-bottom: 80%;
+    width: 100%;
+    padding-bottom: 100%;
   }
 
-  .rotated-image-container {
+  .rotated-image-container,
+  .outer-circle {
     display: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .circle {
-    width: 60%;
-    padding-bottom: 60%;
   }
 }
