@@ -1,0 +1,25 @@
+{
+  "discounts": [
+    {
+      "productName": "Pizza peperoni",
+      "productDescription": "Pepperoni pizza is a type of pizza with tomato sauce, mozzarella cheese, and slices of pepperoni sausage, which has a slightly spicy and salty flavor. It's a popular choice for pizza lovers worldwide.",
+      "productImage": "https://i.pinimg.com/564x/95/ec/c2/95ecc2e059692a2d7d7e40b15f8b211a.jpg",
+      "initialPrice": "13$",
+      "discountedPrice": "10$"
+    },
+    {
+      "productName": "Burger",
+      "productDescription": "Steak is a cooked beef dish that can be seasoned in various ways and enjoyed with sides. It's a popular dish worldwide and often served at restaurants or special occasions.",
+      "productImage": "https://i.pinimg.com/564x/4d/5d/98/4d5d981b39836c44755b4f9414ab8de1.jpg",
+      "initialPrice": "7$",
+      "discountedPrice": "5$"
+    },
+    {
+      "productName": "Steak",
+      "productDescription": "A burger is a sandwich made with a cooked ground beef patty on a bun. It can be customized with various toppings like cheese, lettuce, tomato, pickles, and condiments. Burgers are a popular fast food item worldwide and a favorite at backyard barbecues.",
+      "productImage": "https://i.pinimg.com/564x/28/2e/22/282e222464666a3b7cb47b1ae41b44ad.jpg",
+      "initialPrice": "15$",
+      "discountedPrice": "12$"
+    }
+  ]
+}
