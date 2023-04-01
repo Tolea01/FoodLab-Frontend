@@ -20,6 +20,27 @@
       "productImage": "https://i.pinimg.com/564x/28/2e/22/282e222464666a3b7cb47b1ae41b44ad.jpg",
       "initialPrice": "15$",
       "discountedPrice": "12$"
+    },
+    {
+      "productName": "Chicken Fajitas",
+      "productDescription": "Chicken fajitas are a popular Tex-Mex dish made with seasoned chicken, onions, and bell peppers served on a sizzling skillet with tortillas and toppings such as sour cream, guacamole, and salsa. It's a flavorful and customizable dish that's perfect for sharing with friends and family.",
+      "productImage": "https://i.pinimg.com/564x/c2/b4/0e/c2b40e2b19d0e75fd3cd158e14cf62f1.jpg",
+      "initialPrice": "14$",
+      "discountedPrice": "11$"
+    },
+    {
+      "productName": "Pepperoni Calzone",
+      "productDescription": "A calzone is a type of Italian oven-baked turnover made of pizza dough that is filled with ingredients such as tomato sauce, cheese, meats, and vegetables. The Pepperoni Calzone is a classic variation filled with mozzarella cheese, tomato sauce, and pepperoni slices.",
+      "productImage": "https://i.pinimg.com/564x/b7/83/bf/b783bfc81ab8d8e18735b5b706999795.jpg",
+      "initialPrice": "10$",
+      "discountedPrice": "8$"
+    },
+    {
+      "productName": "Fish and Chips",
+      "productDescription": "Fish and chips is a popular British dish that consists of battered and deep-fried fish, usually cod or haddock, served with thick-cut French fries. It's often accompanied by tartar sauce, mushy peas, or a side salad. It's a classic comfort food that can be enjoyed at any time of the day.",
+      "productImage": "https://i.pinimg.com/564x/f3/e7/cc/f3e7cc62b5d13b70b1e333a3c5079e40.jpg",
+      "initialPrice": "12$",
+      "discountedPrice": "9$"
     }
   ]
 }

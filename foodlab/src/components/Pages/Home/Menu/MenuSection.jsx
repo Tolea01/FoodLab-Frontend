@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import ProductCard from '../../../Template/ProductCard';
 import hTag from '../../../../assets/img/h-tag.png';
 import leftLine from '../../../../assets/img/y-left-s.png';
 import rightLine from '../../../../assets/img/y-right-s.png';
 import '../../../../assets/styles/menu-section.css';
 
 export default function MenuSection() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get('http://localhost:3001/discounts')
+      .then(productsData => setProducts(productsData.data))
+      .catch(err => console.log(err))
+  }, [])
+
   return (
     <section className="menu-section">
       <Container className='container-lg' fluid>
@@ -35,58 +44,20 @@ export default function MenuSection() {
           </Row>
         </div>
         <Row className='men-section-card'>
-          <Col className='mb10 d-flex justify-content-center'>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="https://i.pinimg.com/564x/34/f4/8f/34f48f5c56c938642b80b0555e5adf82.jpg" />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col className='mb10 d-flex justify-content-center'>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="https://i.pinimg.com/564x/34/f4/8f/34f48f5c56c938642b80b0555e5adf82.jpg" />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col className='mb10 d-flex justify-content-center'>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="https://i.pinimg.com/564x/34/f4/8f/34f48f5c56c938642b80b0555e5adf82.jpg" />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col className='mb10 d-flex justify-content-center'>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="https://i.pinimg.com/564x/34/f4/8f/34f48f5c56c938642b80b0555e5adf82.jpg" />
-              <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
-              </Card.Body>
-            </Card>
-          </Col>
+          {
+            products.slice(0, 4).map((product, index) => {
+              return (
+                <Col className='mb10 d-flex justify-content-center' key={index}>
+                  <ProductCard
+                    cardTitle={product.productName}
+                    productImage={product.productImage}
+                    oldPrice={product.initialPrice}
+                    price={product.discountedPrice}
+                    saleIcon='true' />
+                </Col>
+              )
+            })
+          }
         </Row>
       </Container>
     </section>
