@@ -35,19 +35,7 @@
 .culinary-section-search:focus,
 .culinary-section-search:active {
   box-shadow: none;
-}
-
-.culinary-section-search-button {
-  border-radius: 0;
-  padding: 0 25px;
-  border: none;
-  background-color: #ffbe00;
-}
-
-.culinary-section-search-button:hover,
-.culinary-section-search-button:focus,
-.culinary-section-search-button:active {
-  background-color: #ffbe00 !important;
+  border-color: #ffbe00;
 }
 
 /* --------------------------------------------------------------------------------------------------------------------- */

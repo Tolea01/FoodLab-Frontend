@@ -2,12 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import { BiSearch } from "react-icons/bi";
 import ProductCard from '../../Template/ProductCard';
 import PageHeader from '../../Template/PageHeader';
 import '../../../assets/styles/menu.css';
@@ -16,6 +12,7 @@ export default function Menu() {
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState('Pizza');
   const [activeCategory, setActiveCategory] = useState(null);
+  const [inputValue, setInputValue] = useState('');
 
   const sendGetRequest = (link) => {
     axios
@@ -37,6 +34,10 @@ export default function Menu() {
       </li>
     )
   }
+
+  const filteredProducts = products.filter(product => {
+    return (product.productName.toLowerCase().includes(inputValue.toLowerCase()));
+  })
 
   useEffect(() => {
     sendGetRequest(`http://localhost:3001/${category}`);
@@ -65,17 +66,15 @@ export default function Menu() {
                   placeholder={`Search ${category}`}
                   className='culinary-section-search'
                   aria-label="Search"
+                  onInput={(event) => setInputValue(event.target.value)}
                 />
-                <Button className='culinary-section-search-button'>
-                  <BiSearch className='fs-6' />
-                </Button>
               </Form>
             </Row>
             <Row className='mt-5 ms-sm-0 ms-lg-2'>
               {
-                products.map((product, index) => {
+                filteredProducts.map((product, index) => {
                   return (
-                    <Col className='mb-4 culinary-section-product ' key={index}>
+                    <Col className='mb-4 culinary-section-product' key={index}>
                       <ProductCard
                         cardTitle={product.productName}
                         cardDescription={product.productDescription}
