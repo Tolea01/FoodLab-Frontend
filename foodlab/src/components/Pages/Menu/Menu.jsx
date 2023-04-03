@@ -14,12 +14,26 @@ import '../../../assets/styles/menu.css';
 
 export default function Menu() {
   const [products, setProducts] = useState([]);
+  const [category, setCategory] = useState(null);
+
+  const sendGetRequest = (link) => {
+    axios
+      .get(link)
+      .then(productsData => setProducts(productsData.data))
+      .catch(error => console.log(error));
+  }
+
+  const categoryClick = (categoryName) => {
+    setCategory(categoryName);
+  }
 
   useEffect(() => {
-    axios
-      .get('http://localhost:3001/pizza')
-      .then(productsData => setProducts(productsData.data))
-  }, [])
+    if (category === null) {
+      sendGetRequest('http://localhost:3001/Pizza');
+    } else {
+      sendGetRequest(`http://localhost:3001/${category}`);
+    }
+  }, [category])
 
   return (
     <>
@@ -28,12 +42,12 @@ export default function Menu() {
         <Row className='culinary-section w-100 mt6'>
           <Col className='mb-4' sm={12} md={3}>
             <ul className='text-center'>
-              <li>Pizza</li>
-              <li>Pasta</li>
-              <li>Meat</li>
-              <li>Salads</li>
-              <li>Soup</li>
-              <li>Beverages</li>
+              <li onClick={() => categoryClick('Pizza')}>Pizza</li>
+              <li onClick={() => categoryClick('Burger')}>Burger</li>
+              <li onClick={() => categoryClick('Meat')}>Meat</li>
+              <li onClick={() => categoryClick('Salad')}>Salads</li>
+              <li onClick={() => categoryClick('Soup')}>Soup</li>
+              <li onClick={() => categoryClick('Beverage')}>Beverages</li>
             </ul>
           </Col>
           <Col sm={12} md={9}>
@@ -70,7 +84,5 @@ export default function Menu() {
         </Row>
       </Container >
     </>
-
-
   )
 }

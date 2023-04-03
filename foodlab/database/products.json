@@ -86,5 +86,120 @@
       "initialPrice": "15$",
       "discountedPrice": "12$"
     }
+  ],
+  "Burger": [
+    {
+      "productName": "Classic Burger",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
+      "productImage": "https://i.pinimg.com/564x/af/a2/be/afa2bef7d68b983362819c9f21944e52.jpg",
+      "initialPrice": "10$",
+      "discountedPrice": "8$"
+    },
+    {
+      "productName": "Cheeseburger",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
+      "productImage": "https://i.pinimg.com/564x/d3/fc/cd/d3fccd9b8160ecb10854814b4283acdb.jpg",
+      "initialPrice": "12$",
+      "discountedPrice": "9$"
+    },
+    {
+      "productName": "Bacon Burger",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
+      "productImage": "https://i.pinimg.com/564x/5d/64/35/5d6435372498720ba5f33695fce715ca.jpg",
+      "initialPrice": "13$",
+      "discountedPrice": "10$"
+    }
+  ],
+  "Meat": [
+    {
+      "productName": "Biftec argentinian",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
+      "productImage": "https://i.pinimg.com/564x/9d/7f/43/9d7f437c32029d9747ab931543d22ac2.jpg",
+      "initialPrice": "20$",
+      "discountedPrice": "18$"
+    },
+    {
+      "productName": "Beef steak with wine sauce",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
+      "productImage": "https://i.pinimg.com/564x/fe/3a/26/fe3a263ffc6858f0bfce703530040536.jpg",
+      "initialPrice": "25$",
+      "discountedPrice": "22$"
+    },
+    {
+      "productName": "Snitel vienez",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
+      "productImage": "https://i.pinimg.com/564x/38/f5/4b/38f54b3fc22fb00b72e45529573ca0dd.jpg",
+      "initialPrice": "15$",
+      "discountedPrice": "13$"
+    }
+  ],
+  "Salad": [
+    {
+      "productName": "Caesar Salad",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
+      "productImage": "https://i.pinimg.com/564x/3f/d4/64/3fd464fd01f7d579aaff4daff287d2d4.jpg",
+      "initialPrice": "9$",
+      "discountedPrice": "7$"
+    },
+    {
+      "productName": "Greek Salad",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
+      "productImage": "https://i.pinimg.com/564x/a4/01/7e/a4017e0848924fb73cb5e9f43fdb2cc9.jpg",
+      "initialPrice": "10$",
+      "discountedPrice": "8$"
+    },
+    {
+      "productName": "Caprese Salad",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
+      "productImage": "https://i.pinimg.com/564x/08/f9/e4/08f9e4cf15c6d2214f8bd6860b160f9b.jpg",
+      "initialPrice": "12$",
+      "discountedPrice": "10$"
+    }
+  ],
+  "Soup": [
+    {
+      "productName": "Tomato Soup",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
+      "productImage": "https://i.pinimg.com/564x/d6/0b/dd/d60bdd2434051a81eba6b6c91747a010.jpg",
+      "initialPrice": "6$",
+      "discountedPrice": "4$"
+    },
+    {
+      "productName": "Mushroom Soup",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
+      "productImage": "https://i.pinimg.com/564x/77/2a/8b/772a8b6df2d520b3c06947b669008530.jpg",
+      "initialPrice": "7$",
+      "discountedPrice": "5$"
+    },
+    {
+      "productName": "Pumpkin Soup",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
+      "productImage": "https://i.pinimg.com/564x/f3/a8/92/f3a892e08ace856d6e77c940e133af4b.jpg",
+      "initialPrice": "8$",
+      "discountedPrice": "6$"
+    }
+  ],
+  "Beverage": [
+    {
+      "productName": "Coca Cola",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
+      "productImage": "https://i.pinimg.com/564x/a0/a3/96/a0a396e31d48ee1c694321fb1aa26656.jpg",
+      "initialPrice": "2$",
+      "discountedPrice": "1.5$"
+    },
+    {
+      "productName": "Fresh Orange Juice",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
+      "productImage": "https://i.pinimg.com/564x/8e/0e/ff/8e0effa24aacbc1eba4646b84a1529f1.jpg",
+      "initialPrice": "3.5$",
+      "discountedPrice": "3$"
+    },
+    {
+      "productName": "Iced Tea",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
+      "productImage": "https://i.pinimg.com/564x/be/34/ba/be34bac0da556f3651485d77ad3004f6.jpg",
+      "initialPrice": "4$",
+      "discountedPrice": "3.5$"
+    }
   ]
 }

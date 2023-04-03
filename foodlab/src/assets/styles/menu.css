@@ -16,6 +16,7 @@
   transition: all .4s ease-in-out;
 }
 
+.active-category,
 .culinary-section ul li:hover {
   color: #ffbe00;
   background-color: #ececec;
