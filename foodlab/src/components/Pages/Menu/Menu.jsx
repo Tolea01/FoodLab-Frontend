@@ -15,6 +15,7 @@ import '../../../assets/styles/menu.css';
 export default function Menu() {
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState(null);
+  const [activeCategory, setActiveCategory] = useState(null);
 
   const sendGetRequest = (link) => {
     axios
@@ -25,6 +26,16 @@ export default function Menu() {
 
   const categoryClick = (categoryName) => {
     setCategory(categoryName);
+    setActiveCategory(categoryName);
+  }
+
+  const categoryList = (categoryName) => {
+    return (
+      <li
+        className={activeCategory === categoryName ? 'active-category' : ''}
+        onClick={() => categoryClick(categoryName)}>{categoryName}
+      </li>
+    )
   }
 
   useEffect(() => {
@@ -42,12 +53,12 @@ export default function Menu() {
         <Row className='culinary-section w-100 mt6'>
           <Col className='mb-4' sm={12} md={3}>
             <ul className='text-center'>
-              <li onClick={() => categoryClick('Pizza')}>Pizza</li>
-              <li onClick={() => categoryClick('Burger')}>Burger</li>
-              <li onClick={() => categoryClick('Meat')}>Meat</li>
-              <li onClick={() => categoryClick('Salad')}>Salads</li>
-              <li onClick={() => categoryClick('Soup')}>Soup</li>
-              <li onClick={() => categoryClick('Beverage')}>Beverages</li>
+              {categoryList('Pizza')}
+              {categoryList('Burger')}
+              {categoryList('Meat')}
+              {categoryList('Salad')}
+              {categoryList('Soup')}
+              {categoryList('Beverage')}
             </ul>
           </Col>
           <Col sm={12} md={9}>

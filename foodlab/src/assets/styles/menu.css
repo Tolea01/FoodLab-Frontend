@@ -18,7 +18,7 @@
 
 .active-category,
 .culinary-section ul li:hover {
-  color: #ffbe00;
+  color: #ffbe00 !important;
   background-color: #ececec;
 }
 
