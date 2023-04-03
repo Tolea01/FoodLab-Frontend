@@ -2,45 +2,89 @@
   "discounts": [
     {
       "productName": "Pizza peperoni",
-      "productDescription": "Pepperoni pizza is a type of pizza with tomato sauce, mozzarella cheese, and slices of pepperoni sausage, which has a slightly spicy and salty flavor. It's a popular choice for pizza lovers worldwide.",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/95/ec/c2/95ecc2e059692a2d7d7e40b15f8b211a.jpg",
       "initialPrice": "13$",
       "discountedPrice": "10$"
     },
     {
       "productName": "Burger",
-      "productDescription": "Steak is a cooked beef dish that can be seasoned in various ways and enjoyed with sides. It's a popular dish worldwide and often served at restaurants or special occasions.",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/4d/5d/98/4d5d981b39836c44755b4f9414ab8de1.jpg",
       "initialPrice": "7$",
       "discountedPrice": "5$"
     },
     {
       "productName": "Steak",
-      "productDescription": "A burger is a sandwich made with a cooked ground beef patty on a bun. It can be customized with various toppings like cheese, lettuce, tomato, pickles, and condiments. Burgers are a popular fast food item worldwide and a favorite at backyard barbecues.",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/28/2e/22/282e222464666a3b7cb47b1ae41b44ad.jpg",
       "initialPrice": "15$",
       "discountedPrice": "12$"
     },
     {
       "productName": "Chicken Fajitas",
-      "productDescription": "Chicken fajitas are a popular Tex-Mex dish made with seasoned chicken, onions, and bell peppers served on a sizzling skillet with tortillas and toppings such as sour cream, guacamole, and salsa. It's a flavorful and customizable dish that's perfect for sharing with friends and family.",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/c2/b4/0e/c2b40e2b19d0e75fd3cd158e14cf62f1.jpg",
       "initialPrice": "14$",
       "discountedPrice": "11$"
     },
     {
       "productName": "Pepperoni Calzone",
-      "productDescription": "A calzone is a type of Italian oven-baked turnover made of pizza dough that is filled with ingredients such as tomato sauce, cheese, meats, and vegetables. The Pepperoni Calzone is a classic variation filled with mozzarella cheese, tomato sauce, and pepperoni slices.",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/b7/83/bf/b783bfc81ab8d8e18735b5b706999795.jpg",
       "initialPrice": "10$",
       "discountedPrice": "8$"
     },
     {
       "productName": "Fish and Chips",
-      "productDescription": "Fish and chips is a popular British dish that consists of battered and deep-fried fish, usually cod or haddock, served with thick-cut French fries. It's often accompanied by tartar sauce, mushy peas, or a side salad. It's a classic comfort food that can be enjoyed at any time of the day.",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/f3/e7/cc/f3e7cc62b5d13b70b1e333a3c5079e40.jpg",
       "initialPrice": "12$",
       "discountedPrice": "9$"
+    }
+  ],
+  "Pizza": [
+    {
+      "productName": "Pepperoni Pizza",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
+      "productImage": "https://i.pinimg.com/564x/06/08/d6/0608d6aca89fe0a4661dbdbcb8c82de6.jpg",
+      "initialPrice": "13$",
+      "discountedPrice": "10$"
+    },
+    {
+      "productName": "Margherita Pizza",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
+      "productImage": "https://i.pinimg.com/564x/e7/74/81/e774814378640df5e2492ebd0ad76db4.jpg",
+      "initialPrice": "12$",
+      "discountedPrice": "9$"
+    },
+    {
+      "productName": "Hawaiian Pizza",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
+      "productImage": "https://i.pinimg.com/564x/a8/90/7a/a8907a97833eb583f84e0e24bcc27491.jpg",
+      "initialPrice": "14$",
+      "discountedPrice": "11$"
+    },
+    {
+      "productName": "BBQ Chicken Pizza",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
+      "productImage": "https://i.pinimg.com/564x/7f/7f/da/7f7fdab64db55432ebff36e54b77706d.jpg",
+      "initialPrice": "15$",
+      "discountedPrice": "12$"
+    },
+    {
+      "productName": "Mushroom Pizza",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
+      "productImage": "https://i.pinimg.com/564x/29/07/dc/2907dcb5fbc6d6e2491e1a1bddf48e86.jpg",
+      "initialPrice": "12$",
+      "discountedPrice": "9$"
+    },
+    {
+      "productName": "Meat Lover's Pizza",
+      "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
+      "productImage": "https://i.pinimg.com/564x/84/06/72/84067249fe2e1ddd889928e5e93e071b.jpg",
+      "initialPrice": "15$",
+      "discountedPrice": "12$"
     }
   ]
 }

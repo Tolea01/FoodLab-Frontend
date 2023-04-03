@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+.culinary-section {
+  background-color: #ffffff;
+}
+
+.culinary-section ul li {
+  color: black;
+  border-bottom: 1px solid #ececec;
+  padding: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  transition: all .4s ease-in-out;
+}
+
+.culinary-section ul li:hover {
+  color: #ffbe00;
+  background-color: #ececec;
+}
+
+.mt6 {
+  margin-top: 6%;
+}
+
+.culinary-section-search {
+  height: 45px;
+  border-radius: 0;
+}
+
+.culinary-section-search:hover,
+.culinary-section-search:focus,
+.culinary-section-search:active {
+  box-shadow: none;
+}
+
+.culinary-section-search-button {
+  border-radius: 0;
+  padding: 0 25px;
+  border: none;
+  background-color: #ffbe00;
+}
+
+.culinary-section-search-button:hover,
+.culinary-section-search-button:focus,
+.culinary-section-search-button:active {
+  background-color: #ffbe00 !important;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+@media(max-width: 992px) {
+  .culinary-section-product {
+    display: flex;
+    justify-content: center;
+  }
+}
