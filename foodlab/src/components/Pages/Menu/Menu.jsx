@@ -14,7 +14,7 @@ import '../../../assets/styles/menu.css';
 
 export default function Menu() {
   const [products, setProducts] = useState([]);
-  const [category, setCategory] = useState(null);
+  const [category, setCategory] = useState('Pizza');
   const [activeCategory, setActiveCategory] = useState(null);
 
   const sendGetRequest = (link) => {
@@ -39,11 +39,7 @@ export default function Menu() {
   }
 
   useEffect(() => {
-    if (category === null) {
-      sendGetRequest('http://localhost:3001/Pizza');
-    } else {
-      sendGetRequest(`http://localhost:3001/${category}`);
-    }
+    sendGetRequest(`http://localhost:3001/${category}`);
   }, [category])
 
   return (
@@ -66,7 +62,7 @@ export default function Menu() {
               <Form className="d-flex w-100">
                 <Form.Control
                   type="text"
-                  placeholder="Search dishes"
+                  placeholder={`Search ${category}`}
                   className='culinary-section-search'
                   aria-label="Search"
                 />
