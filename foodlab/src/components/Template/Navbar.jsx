@@ -20,7 +20,7 @@ export default function NavBar() {
           <Nav className='mx-auto nav-link text-uppercase'>
             <Nav.Link as={Link} to='/'>Home</Nav.Link>
             <Nav.Link as={Link} to='/about'>About</Nav.Link>
-            <Nav.Link as={Link} to='/services'>Servives</Nav.Link>
+            <Nav.Link as={Link} to='/services'>Services</Nav.Link>
             <Nav.Link as={Link} to='/menu'>Menu</Nav.Link>
             <Nav.Link as={Link} to='/contacts'>Contacts</Nav.Link>
           </Nav>
