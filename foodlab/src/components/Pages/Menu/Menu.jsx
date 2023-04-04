@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
+import { BiSearch } from "react-icons/bi";
 import ProductCard from '../../Template/ProductCard';
 import PageHeader from '../../Template/PageHeader';
 import '../../../assets/styles/menu.css';
@@ -60,7 +61,7 @@ export default function Menu() {
           </Col>
           <Col sm={12} md={9}>
             <Row>
-              <Form className="d-flex w-100">
+              <Form className="d-flex w-100 position-relative">
                 <Form.Control
                   type="text"
                   placeholder={`Search ${category}`}
@@ -68,6 +69,7 @@ export default function Menu() {
                   aria-label="Search"
                   onInput={(event) => setInputValue(event.target.value)}
                 />
+                <BiSearch className='fs-5 position-absolute search-icon'/>
               </Form>
             </Row>
             <Row className='mt-5 ms-sm-0 ms-lg-2'>

@@ -31,11 +31,17 @@
   border-radius: 0;
 }
 
-.culinary-section-search:hover,
 .culinary-section-search:focus,
 .culinary-section-search:active {
   box-shadow: none;
   border-color: #ffbe00;
+}
+
+.search-icon {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  color: #5e5d5d;
 }
 
 /* --------------------------------------------------------------------------------------------------------------------- */
