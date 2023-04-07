@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+.menu-options-section {
+  background-color: #ffffff;
+}
+
+.text-content h6 {
+  color: #ffbe00;
+  font-family: roboto, Sans-serif;
+  font-weight: 500;
+}
+
+.text-content h3 {
+  color: #101010;
+  font-family: playfair display, Sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.pt-10 {
+  padding-top: 10%;
+}
+
+.paragraph {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+}
+
+.option-card {
+  background-color: #ffb206;
+}
+
+.option-card-number {
+  color: #959595;
+  font-family: roboto, Sans-serif;
+  font-size: 80px;
+  font-weight: 600;
+}
+
+.option-card-title {
+  color: #252525;
+  font-family: playfair display, Sans-serif;
+  font-size: 31px;
+  font-weight: 600;
+}
+
+.option-card-text {
+  color: #252525;
+  font-family: roboto, Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.mb-5 {
+  margin-bottom: 5%;
+}
