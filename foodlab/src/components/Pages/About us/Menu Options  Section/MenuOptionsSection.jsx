@@ -3,7 +3,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
-import PageHeader from '../../../Template/PageHeader';
 import img1 from '../../../../assets/img/b-1.png';
 import img2 from '../../../../assets/img/b-2.png';
 import img3 from '../../../../assets/img/b-3.png';
@@ -32,7 +31,6 @@ export default function MenuOptionsSection() {
 
   return (
     <div className="menu-options-section">
-      <PageHeader textContent='About Us' />
       <Container>
         <Row className='pt-10 mb-5'>
           <Col className='text-content' sm={12} md={6}>
@@ -45,11 +43,11 @@ export default function MenuOptionsSection() {
             </p>
           </Col>
         </Row>
-        <Row className='mb5'>
+        <Row className='mb-5'>
           {
             cards.map((card, index) => {
               return (
-                <Col className='mb-3' key={index}>
+                <Col key={index}>
                   <div className='option-card p-4 pb-5'>
                     <div className='d-flex justify-content-between mb-3'>
                       <Image src={card.img} />

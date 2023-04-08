@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+.our-company {
+  padding-top: 5%;
+  background-color: #ffffff;
+}
+
+.best-service-text-section {
+  margin-bottom: 5%;
+}
+
+.img-fruit {
+  width: 120px;
+  height: 120px;
+  left: 80px;
+  top: 100px;
+  animation: fruit-img 5s alternate infinite;
+}
+
+.our-company h2 {
+  font-family: Playfair Display;
+  font-size: calc(33px + 12 * (100vw / 1700));
+}
+
+.our-company-text {
+  width: 550px;
+  color: #4a4949;
+  font-family: Roboto;
+  font-size: 19px;
+}
+
+.best-service-img {
+  border-radius: 70px;
+  width: 150px;
+  height: 494px;
+}
+
+/* ----------------------------------------------------------------------------- */
+
+@media(max-width:1200px) {
+
+  .img-fruit,
+  .img-food {
+    display: none;
+  }
+}
+
+@media(max-width:768px) {
+  .our-company-img {
+    display: none;
+  }
+}
+
+@media(max-width:576px) {
+  .our-company-text {
+    width: 100%;
+  }
+}
