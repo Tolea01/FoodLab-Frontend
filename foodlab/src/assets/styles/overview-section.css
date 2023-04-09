@@ -1,0 +1,21 @@
+.overview {
+  padding-top: 5%;
+}
+
+.overview-text {
+  padding-top: 6%;
+}
+
+.overview-text h2 {
+  color: #131313;
+  font-size: 40px;
+  font-family: Playfair Display;
+}
+
+.overview-text p {
+  color: #383838;
+  font-family: "Roboto", Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 27px;
+}
