@@ -48,7 +48,7 @@ export default function MenuOptionsSection() {
             cards.map((card, index) => {
               return (
                 <Col key={index}>
-                  <div className='option-card p-4 pb-5'>
+                  <div className='option-card p-4 pb-5 mb-3'>
                     <div className='d-flex justify-content-between mb-3'>
                       <Image src={card.img} />
                       <h2 className='option-card-number'>{index + 1}</h2>

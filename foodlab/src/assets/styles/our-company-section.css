@@ -36,6 +36,34 @@
   height: 494px;
 }
 
+.our-company-card {
+  background-color: #ffb206;
+  width: 320px;
+  height: 260px;
+}
+
+.our-company-card h3 {
+  color: #131313;
+  font-size: 36px;
+  font-family: Playfair Display;
+}
+
+.our-company-card p {
+  color: #252525;
+  font-family: Roboto;
+  line-height: 30px;
+}
+
+.our-company-card-img {
+  width: 320px;
+  height: 260px;
+}
+
+.content-col {
+  width: 320px;
+  height: 260px;
+}
+
 /* ----------------------------------------------------------------------------- */
 
 @media(max-width:1200px) {
@@ -43,6 +71,12 @@
   .img-fruit,
   .img-food {
     display: none;
+  }
+
+  .our-company-card,
+  .our-company-card-img,
+  .content-col {
+    width: 100%;
   }
 }
 
