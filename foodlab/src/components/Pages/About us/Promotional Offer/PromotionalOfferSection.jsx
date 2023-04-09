@@ -43,24 +43,3 @@ export default function PromotionalOfferSection() {
     </section >
   )
 }
-
-
-
-
-
-{/* <Row>
-                <Col className='promotional-offer-col d-flex'>
-                  <Image className='column-img me-3' src={deliveryImg} />
-                  <div className="column-text">
-                    <h4>With Free Delivery</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipis.</p>
-                  </div>
-                </Col>
-                <Col className='promotional-offer-col d-flex'>
-                  <Image className='column-img me-3' src={deliveryImg} />
-                  <div className="column-text">
-                    <h4>With Free Delivery</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipis.</p>
-                  </div>
-                </Col>
-              </Row> */}

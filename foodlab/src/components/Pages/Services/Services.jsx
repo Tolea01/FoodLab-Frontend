@@ -1,7 +1,12 @@
-import React from 'react'
+import React from 'react';
+import PageHeader from '../../Template/PageHeader';
+import OverviewSection from './Overview Section/OverviewSection';
 
 export default function Services() {
   return (
-    <div>Services</div>
+    <>
+      <PageHeader textContent='Services' />
+      <OverviewSection />
+    </>
   )
 }
