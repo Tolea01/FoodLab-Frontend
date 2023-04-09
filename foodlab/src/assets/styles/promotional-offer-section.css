@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+.promotional-offer {
+  background-color: #ffffff;
+  padding-top: 5%;
+}
+
+.promotional-offer-text h6 {
+  color: #ffbe00;
+  font-family: roboto, Sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.promotional-offer-text h3 {
+  color: #101010;
+  font-family: playfair display, Sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.promotional-offer-text p {
+  color: #252525;
+  font-family: Roboto;
+  line-height: 30px;
+}
+
+.column-text h4 {
+  color: #0F0F0F;
+  font-family: Roboto;
+  font-size: 19px;
+}
+
+.column-text p {
+  width: 228px;
+  height: 46px;
+  line-height: 23px;
+}
+
+.column-img {
+  width: 69px;
+  height: 69px;
+}
+
+.promotional-offer-r-col {
+  background-image: url(../img/bg-food.png);
+}
+
+.pt5 {
+  padding-top: 5%;
+}
+
+/* -------------------------------------------------------------------------------------------------- */
+
+@media(max-width: 1200px) {
+  .promotional-offer-r-col {
+    display: none;
+  }
+
+  .promotional-offer-col {
+    justify-content: center;
+  }
+}

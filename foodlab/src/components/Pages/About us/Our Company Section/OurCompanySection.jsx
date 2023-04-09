@@ -64,7 +64,7 @@ export default function OurCompanySection() {
           </Row>
         </div>
 
-        <div className='d-flex flex-column align-items-center px-2 me-3'>
+        <div className='d-flex flex-column align-items-center px-2 me-2 ms-2'>
           <Row className='d-flex justify-content-center'>
             {textCard('Our Mission')}
             {imgCard(img2)}
