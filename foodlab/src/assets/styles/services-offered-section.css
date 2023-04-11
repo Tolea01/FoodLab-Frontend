@@ -1,0 +1,78 @@
+.services-offered-col {
+  padding-top: 5%;
+  padding-left: 18%;
+  padding-right: 8%;
+  padding-bottom: 6%;
+}
+
+.services-offered-col h4 {
+  color: #FFFFFF;
+  font-family: "Roboto", Sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.services-offered-col h2 {
+  color: #101010;
+  font-family: "Playfair Display", Sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 49px;
+}
+
+.services-offered-img {
+  width: 69px;
+  height: 69px;
+}
+
+.option-card h2 {
+  color: rgb(188 188 188/73%);
+  font-family: roboto, Sans-serif;
+  font-size: 80px;
+  font-weight: 600;
+}
+
+.services-offered-col::after {
+  content: '';
+  display: block;
+  width: 72.2%;
+  height: 100%;
+  background-image: url(../img//bg-food.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.services-offered-col>* {
+  z-index: 10;
+  position: relative;
+}
+
+.card-link {
+  font-size: 19px;
+  text-decoration: none;
+  font-family: roboto;
+  color: #252525;
+}
+
+.services-offered-card:hover>* {
+  color: #ffbe00;
+}
+
+.services-offered-card:hover {
+  background-color: #0f0f0f !important;
+}
+
+.services-offered-card {
+  box-shadow: 0 5px 19.53px 1.47px rgb(85 80 98/19%);
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+@media(max-width:576px) {
+  .services-offered-col {
+    padding-left: 4%;
+    padding-right: 0;
+  }
+}
