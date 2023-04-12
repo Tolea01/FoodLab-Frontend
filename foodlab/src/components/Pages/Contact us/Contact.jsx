@@ -1,7 +1,12 @@
-import React from 'react'
+import React from 'react';
+import PageHeader from '../../Template/PageHeader';
+import ContactDetails from './Contact Details/ContactDetails';
 
 export default function Contact() {
   return (
-    <div>Contact</div>
+    <>
+      <PageHeader textContent='Contact Us' />
+      <ContactDetails />
+    </>
   )
 }

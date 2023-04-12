@@ -1,0 +1,58 @@
+.contact-details-left-col {
+  background-color: #ffbe00;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.card-icon {
+  width: 76px;
+  height: 70px;
+  background-color: #ffbe00;
+}
+
+.pt8 {
+  padding-top: 8%;
+}
+
+.contact-details-card {
+  border: 1px solid #CACACA;
+}
+
+.contact-details-form {
+  background-color: #fff;
+  box-shadow: 0 5px 19.53px 1.47px rgb(85 80 98/19%);
+  border-radius: 5px;
+}
+
+.ms4 {
+  margin-left: 4%;
+}
+
+.contact-details-form h2 {
+  color: #000000;
+  font-family: "Playfair Display", Sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.contact-details-inputs,
+.contact-details-textarea {
+  background-color: #EDEDED;
+}
+
+.container-textarea {
+  color: #666;
+  font-size: 14px;
+}
+
+/* ------------------------------------------------------------------------------ */
+
+@media(max-width: 992px) {
+  .contact-details-left-col {
+    display: none;
+  }
+
+  .ms4 {
+    margin-left: 0;
+  }
+}
