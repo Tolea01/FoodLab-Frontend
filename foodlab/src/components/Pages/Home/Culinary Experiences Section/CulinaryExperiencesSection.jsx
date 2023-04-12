@@ -41,7 +41,7 @@ export default function CulinaryExperiencesSection() {
             </div>
           </Col>
         </Row>
-        <Row className='w-100 gallery'>
+        <Row className='w-100 gallery me-0 ms-0'>
           <div className='cullinary-experience-galery'>
             <h2 className='mb-5'>
               We Know How to Make the Hygienic And Trusted Food in the city
