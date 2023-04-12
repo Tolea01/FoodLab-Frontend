@@ -1,0 +1,16 @@
+.map {
+  padding-top: 5%;
+}
+
+.map-text {
+  color: #FFBE00;
+  font-family: "Roboto", Sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.map-title {
+  color: #131313;
+  font-family: "Playfair Display";
+  font-weight: 600;
+}
