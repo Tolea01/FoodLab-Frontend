@@ -64,7 +64,7 @@ export default function ShoppingCart() {
             </Offcanvas.Header>
             <Offcanvas.Body>
 
-              <Row className='w-100 d-flex align-items-center'>
+              <Row className='w-100 d-flex align-items-center mb-5'>
                 <Col>
                   <Image className='shoping-cart-img' src={FoodImg} />
                 </Col>
