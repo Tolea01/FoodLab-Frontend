@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
-import { BsArrowUpCircle, BsPlusSquareFill } from "react-icons/bs";
+import { BsArrowUpCircle } from "react-icons/bs";
 import { BsArrowDownCircle } from "react-icons/bs";
 import { BsFillCartFill } from "react-icons/bs";
 import { BsFillPlusSquareFill } from "react-icons/bs";
