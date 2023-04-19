@@ -5,7 +5,7 @@
       "productName": "Pizza peperoni",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/95/ec/c2/95ecc2e059692a2d7d7e40b15f8b211a.jpg",
-      "initialPrice": 3,
+      "initialPrice": 13,
       "discountedPrice": 10,
       "count": 1
     },

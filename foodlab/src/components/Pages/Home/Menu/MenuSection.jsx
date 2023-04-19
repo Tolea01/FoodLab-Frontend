@@ -51,8 +51,8 @@ export default function MenuSection() {
                   <ProductCard
                     cardTitle={product.productName}
                     productImage={product.productImage}
-                    oldPrice={product.initialPrice}
-                    price={product.discountedPrice}
+                    oldPrice={product.initialPrice + '$'}
+                    price={product.discountedPrice + '$'}
                     saleIcon='true' />
                 </Col>
               )
