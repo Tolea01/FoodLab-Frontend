@@ -7,6 +7,7 @@ import Form from 'react-bootstrap/Form';
 import { BiSearch } from "react-icons/bi";
 import ProductCard from '../../Template/ProductCard';
 import PageHeader from '../../Template/PageHeader';
+import ShoppingCart from '../../Template/ShoppingCart';
 import '../../../assets/styles/menu.css';
 
 export default function Menu() {
@@ -14,6 +15,7 @@ export default function Menu() {
   const [category, setCategory] = useState('Pizza');
   const [activeCategory, setActiveCategory] = useState(null);
   const [inputValue, setInputValue] = useState('');
+  const [productsInCart, setProductsInCart] = useState([]);
 
   const sendGetRequest = (link) => {
     axios
@@ -39,6 +41,11 @@ export default function Menu() {
   const filteredProducts = products.filter(product => {
     return (product.productName.toLowerCase().includes(inputValue.toLowerCase()));
   })
+
+  const addProductToCart = (product) => {
+    const newProduct = { ...product }
+    setProductsInCart([...productsInCart, newProduct]);
+  }
 
   useEffect(() => {
     sendGetRequest(`http://localhost:3001/${category}`);
@@ -69,7 +76,7 @@ export default function Menu() {
                   aria-label="Search"
                   onInput={(event) => setInputValue(event.target.value)}
                 />
-                <BiSearch className='fs-5 position-absolute search-icon'/>
+                <BiSearch className='fs-5 position-absolute search-icon' />
               </Form>
             </Row>
             <Row className='mt-5 ms-sm-0 ms-lg-2'>
@@ -81,7 +88,8 @@ export default function Menu() {
                         cardTitle={product.productName}
                         cardDescription={product.productDescription}
                         productImage={product.productImage}
-                        price={product.initialPrice}
+                        price={product.initialPrice + '$'}
+                        addProduct={() => addProductToCart(product)}
                       />
                     </Col>
                   )
@@ -91,6 +99,7 @@ export default function Menu() {
           </Col>
         </Row>
       </Container >
+      <ShoppingCart products={productsInCart} />
     </>
   )
 }

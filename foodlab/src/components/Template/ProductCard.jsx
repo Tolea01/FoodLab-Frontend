@@ -19,7 +19,7 @@ export default function productCard(props) {
           <h6 className='product-card-text-underline'>{props.oldPrice}</h6>
           <h6 className='product-card-text mx-2'>{props.price}</h6>
         </div>
-        <Button className='product-card-button' variant="warning">Add to cart</Button>
+        <Button className='product-card-button' variant="warning" onClick={props.addProduct}>Add to cart</Button>
         {saleIcon}
       </Card.Body>
     </Card>

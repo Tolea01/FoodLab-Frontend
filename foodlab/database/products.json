@@ -5,48 +5,54 @@
       "productName": "Pizza peperoni",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/95/ec/c2/95ecc2e059692a2d7d7e40b15f8b211a.jpg",
-      "initialPrice": "13$",
-      "discountedPrice": "10$"
+      "initialPrice": 3,
+      "discountedPrice": 10,
+      "count": 1
     },
     {
       "id": "discount2",
       "productName": "Burger",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/4d/5d/98/4d5d981b39836c44755b4f9414ab8de1.jpg",
-      "initialPrice": "7$",
-      "discountedPrice": "5$"
+      "initialPrice": 7,
+      "discountedPrice": 5,
+      "count": 1
     },
     {
       "id": "discount3",
       "productName": "Steak",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/28/2e/22/282e222464666a3b7cb47b1ae41b44ad.jpg",
-      "initialPrice": "15$",
-      "discountedPrice": "12$"
+      "initialPrice": 5,
+      "discountedPrice": 2,
+      "count": 1
     },
     {
       "id": "discount4",
       "productName": "Chicken Fajitas",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/c2/b4/0e/c2b40e2b19d0e75fd3cd158e14cf62f1.jpg",
-      "initialPrice": "14$",
-      "discountedPrice": "11$"
+      "initialPrice": 14,
+      "discountedPrice": 10,
+      "count": 1
     },
     {
       "id": "discount5",
       "productName": "Pepperoni Calzone",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/b7/83/bf/b783bfc81ab8d8e18735b5b706999795.jpg",
-      "initialPrice": "10$",
-      "discountedPrice": "8$"
+      "initialPrice": 10,
+      "discountedPrice": 8,
+      "count": 1
     },
     {
       "id": "discount6",
       "productName": "Fish and Chips",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/f3/e7/cc/f3e7cc62b5d13b70b1e333a3c5079e40.jpg",
-      "initialPrice": "12$",
-      "discountedPrice": "9$"
+      "initialPrice": 12,
+      "discountedPrice": 9,
+      "count": 1
     }
   ],
   "Pizza": [
@@ -55,48 +61,54 @@
       "productName": "Pepperoni Pizza",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/06/08/d6/0608d6aca89fe0a4661dbdbcb8c82de6.jpg",
-      "initialPrice": "13$",
-      "discountedPrice": "10$"
+      "initialPrice": 13,
+      "discountedPrice": 10,
+      "count": 1
     },
     {
       "id": "pizza2",
       "productName": "Margherita Pizza",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/e7/74/81/e774814378640df5e2492ebd0ad76db4.jpg",
-      "initialPrice": "12$",
-      "discountedPrice": "9$"
+      "initialPrice": 12,
+      "discountedPrice": 9,
+      "count": 1
     },
     {
       "id": "pizza3",
       "productName": "Hawaiian Pizza",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/a8/90/7a/a8907a97833eb583f84e0e24bcc27491.jpg",
-      "initialPrice": "14$",
-      "discountedPrice": "11$"
+      "initialPrice": 4,
+      "discountedPrice": 1,
+      "count": 1
     },
     {
       "id": "pizza4",
       "productName": "BBQ Chicken Pizza",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/7f/7f/da/7f7fdab64db55432ebff36e54b77706d.jpg",
-      "initialPrice": "15$",
-      "discountedPrice": "12$"
+      "initialPrice": 5,
+      "discountedPrice": 2,
+      "count": 1
     },
     {
       "id": "pizza5",
       "productName": "Mushroom Pizza",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/29/07/dc/2907dcb5fbc6d6e2491e1a1bddf48e86.jpg",
-      "initialPrice": "12$",
-      "discountedPrice": "9$"
+      "initialPrice": 12,
+      "discountedPrice": 9,
+      "count": 1
     },
     {
       "id": "pizza6",
       "productName": "Meat Lover's Pizza",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/84/06/72/84067249fe2e1ddd889928e5e93e071b.jpg",
-      "initialPrice": "15$",
-      "discountedPrice": "12$"
+      "initialPrice": 5,
+      "discountedPrice": 2,
+      "count": 1
     }
   ],
   "Burger": [
@@ -105,24 +117,27 @@
       "productName": "Classic Burger",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/af/a2/be/afa2bef7d68b983362819c9f21944e52.jpg",
-      "initialPrice": "10$",
-      "discountedPrice": "8$"
+      "initialPrice": 10,
+      "discountedPrice": 8,
+      "count": 1
     },
     {
       "id": "burger2",
       "productName": "Cheeseburger",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/d3/fc/cd/d3fccd9b8160ecb10854814b4283acdb.jpg",
-      "initialPrice": "12$",
-      "discountedPrice": "9$"
+      "initialPrice": 12,
+      "discountedPrice": 9,
+      "count": 1
     },
     {
       "id": "burger3",
       "productName": "Bacon Burger",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/5d/64/35/5d6435372498720ba5f33695fce715ca.jpg",
-      "initialPrice": "13$",
-      "discountedPrice": "10$"
+      "initialPrice": 13,
+      "discountedPrice": 10,
+      "count": 1
     }
   ],
   "Meat": [
@@ -131,24 +146,27 @@
       "productName": "Biftec argentinian",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/9d/7f/43/9d7f437c32029d9747ab931543d22ac2.jpg",
-      "initialPrice": "20$",
-      "discountedPrice": "18$"
+      "initialPrice": 10,
+      "discountedPrice": 8,
+      "count": 1
     },
     {
       "id": "meat2",
       "productName": "Beef steak with wine sauce",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/fe/3a/26/fe3a263ffc6858f0bfce703530040536.jpg",
-      "initialPrice": "25$",
-      "discountedPrice": "22$"
+      "initialPrice": 5,
+      "discountedPrice": 2,
+      "count": 1
     },
     {
       "id": "meat3",
       "productName": "Snitel vienez",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/38/f5/4b/38f54b3fc22fb00b72e45529573ca0dd.jpg",
-      "initialPrice": "15$",
-      "discountedPrice": "13$"
+      "initialPrice": 5,
+      "discountedPrice": 3,
+      "count": 1
     }
   ],
   "Salad": [
@@ -157,24 +175,27 @@
       "productName": "Caesar Salad",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/3f/d4/64/3fd464fd01f7d579aaff4daff287d2d4.jpg",
-      "initialPrice": "9$",
-      "discountedPrice": "7$"
+      "initialPrice": 9,
+      "discountedPrice": 7,
+      "count": 1
     },
     {
       "id": "salad2",
       "productName": "Greek Salad",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/a4/01/7e/a4017e0848924fb73cb5e9f43fdb2cc9.jpg",
-      "initialPrice": "10$",
-      "discountedPrice": "8$"
+      "initialPrice": 10,
+      "discountedPrice": 8,
+      "count": 1
     },
     {
       "id": "salad3",
       "productName": "Caprese Salad",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/08/f9/e4/08f9e4cf15c6d2214f8bd6860b160f9b.jpg",
-      "initialPrice": "12$",
-      "discountedPrice": "10$"
+      "initialPrice": 12,
+      "discountedPrice": 10,
+      "count": 1
     }
   ],
   "Soup": [
@@ -183,24 +204,27 @@
       "productName": "Tomato Soup",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/d6/0b/dd/d60bdd2434051a81eba6b6c91747a010.jpg",
-      "initialPrice": "6$",
-      "discountedPrice": "4$"
+      "initialPrice": 6,
+      "discountedPrice": 4,
+      "count": 1
     },
     {
       "id": "soup2",
       "productName": "Mushroom Soup",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/77/2a/8b/772a8b6df2d520b3c06947b669008530.jpg",
-      "initialPrice": "7$",
-      "discountedPrice": "5$"
+      "initialPrice": 7,
+      "discountedPrice": 5,
+      "count": 1
     },
     {
       "id": "soup3",
       "productName": "Pumpkin Soup",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/f3/a8/92/f3a892e08ace856d6e77c940e133af4b.jpg",
-      "initialPrice": "8$",
-      "discountedPrice": "6$"
+      "initialPrice": 8,
+      "discountedPrice": 6,
+      "count": 1
     }
   ],
   "Beverage": [
@@ -209,24 +233,27 @@
       "productName": "Coca Cola",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/a0/a3/96/a0a396e31d48ee1c694321fb1aa26656.jpg",
-      "initialPrice": "2$",
-      "discountedPrice": "1.5$"
+      "initialPrice": 2,
+      "discountedPrice": 1.5,
+      "count": 1
     },
     {
       "id": "beverage2",
       "productName": "Fresh Orange Juice",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/8e/0e/ff/8e0effa24aacbc1eba4646b84a1529f1.jpg",
-      "initialPrice": "3.5$",
-      "discountedPrice": "3$"
+      "initialPrice": 3.5,
+      "discountedPrice": 3,
+      "count": 1
     },
     {
       "id": "beverage3",
       "productName": "Iced Tea",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/be/34/ba/be34bac0da556f3651485d77ad3004f6.jpg",
-      "initialPrice": "4$",
-      "discountedPrice": "3.5$"
+      "initialPrice": 4,
+      "discountedPrice": 3.5,
+      "count": 1
     }
   ]
 }

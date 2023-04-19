@@ -9,7 +9,7 @@ import Menu from './components/Pages/Menu/Menu';
 import Contact from './components/Pages/Contact us/Contact';
 import Navbar from './components/Template/Navbar';
 import Footer from './components/Template/Footer';
-import ShoppingCart from './components/Template/ShoppingCart';
+// import ShoppingCart from './components/Template/ShoppingCart';
 
 export default function App() {
   return (
@@ -24,7 +24,7 @@ export default function App() {
         <Route path="contacts" element={<Contact />} />
       </Routes>
       <Footer />
-      <ShoppingCart />
+      {/* <ShoppingCart /> */}
     </BrowserRouter>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
@@ -11,12 +11,16 @@ import { BsTrash } from "react-icons/bs";
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Image from 'react-bootstrap/Image';
-import FoodImg from '../../assets/img/h-food.png';
 import '../../assets/styles/shopping-cart.css';
 
-export default function ShoppingCart() {
+export default function ShoppingCart(props) {
   const [iconVisible, setIconVisible] = useState(true);
   const [show, setShow] = useState(false);
+  const [quantity, setQuantity] = useState(1);
+
+  const productsPrice = props.products.reduce((totalPrice, product) => {
+    return totalPrice + (product.initialPrice * product.count);
+  }, 0)
 
   const handleClose = () => {
     setShow(false);
@@ -26,6 +30,18 @@ export default function ShoppingCart() {
   const handleShow = () => {
     setShow(true);
     setIconVisible(false);
+  }
+
+  const handleIncrement = (product) => {
+    product.count += 1;
+    setQuantity(product.count);
+  }
+
+  const handleDecrement = (product) => {
+    if (product.count > 1) {
+      product.count -= 1;
+      setQuantity(product.count);
+    }
   }
 
   return (
@@ -39,14 +55,16 @@ export default function ShoppingCart() {
                 <BsArrowDownCircle className='fs-3 me-3 color-yellow shopping-cart-icon mt-1' onClick={handleClose} />
               }
               <div className="shopping-cart-orders shopping-cart-text-color">
-                Your Order
+                {
+                  props.products.length <= 1 ? `Your Order(${props.products.length})` : `Your Orders(${props.products.length})`
+                }
               </div>
             </div>
           </Col>
 
           <Col className='d-flex justify-content-end p-0'>
             <div className="shopping-cart-price mt7">
-              Total: <b>$12.00</b>
+              Total: <b>{productsPrice.toFixed(2) + '$'}</b>
             </div>
             <div>
               <Button className='shopping-cart-button ms-3 px-4 d-none d-md-block' variant="warning">Buy</Button>
@@ -64,25 +82,31 @@ export default function ShoppingCart() {
             </Offcanvas.Header>
             <Offcanvas.Body>
 
-              <Row className='w-100 d-flex align-items-center mb-5'>
-                <Col>
-                  <Image className='shoping-cart-img' src={FoodImg} />
-                </Col>
-                <Col>
-                  <h6 className='shopping-cart-text-color'>food</h6>
-                </Col>
-                <Col>
-                  <h6 className='shopping-cart-text-color'>$12.00</h6>
-                </Col>
-                <Col>
-                  <h6 className='shopping-cart-text-color'>Quantity(1)</h6>
-                </Col>
-                <Col className='d-flex justify-content-end'>
-                  <BsDashSquareFill className='fs-4 me-2 cart-icon' />
-                  <BsFillPlusSquareFill className='fs-4 me-2 cart-icon' />
-                  <BsTrash className='fs-4 cart-icon' />
-                </Col>
-              </Row>
+              {
+                props.products.map((product, index) => {
+                  return (
+                    <Row key={index} className='w-100 d-flex align-items-center mb-4 products-row p-3'>
+                      <Col>
+                        <Image className='shoping-cart-img' src={product.productImage} />
+                      </Col>
+                      <Col>
+                        <h6 className='shopping-cart-text-color'>{product.productName}</h6>
+                      </Col>
+                      <Col>
+                        <h6 className='shopping-cart-text-color'>{product.initialPrice + '$'}</h6>
+                      </Col>
+                      <Col>
+                        <h6 className='shopping-cart-text-color'>{`Quantity(${product.count})`}</h6>
+                      </Col>
+                      <Col className='d-flex justify-content-end'>
+                        <BsDashSquareFill onClick={() => handleDecrement(product)} className='fs-4 me-2 cart-icon' />
+                        <BsFillPlusSquareFill onClick={() => handleIncrement(product)} className='fs-4 me-2 cart-icon' />
+                        <BsTrash className='fs-4 cart-icon' />
+                      </Col>
+                    </Row>
+                  )
+                })
+              }
 
             </Offcanvas.Body>
           </Offcanvas>
