@@ -15,19 +15,19 @@ export default function Menu() {
   const [category, setCategory] = useState('Pizza');
   const [activeCategory, setActiveCategory] = useState(null);
   const [inputValue, setInputValue] = useState('');
-  const [productsInCart, setProductsInCart] = useState([]);
+  const [productsInCart, setProductsInCart] = useState(JSON.parse(localStorage.getItem("shopping-cart")) || []);
 
   const sendGetRequest = (link) => {
     axios
       .get(link)
       .then(productsData => setProducts(productsData.data))
       .catch(error => console.log(error));
-  }
+  };
 
   const categoryClick = (categoryName) => {
     setCategory(categoryName);
     setActiveCategory(categoryName);
-  }
+  };
 
   const categoryList = (categoryName) => {
     return (
@@ -36,20 +36,28 @@ export default function Menu() {
         onClick={() => categoryClick(categoryName)}>{categoryName}
       </li>
     )
-  }
+  };
 
   const filteredProducts = products.filter(product => {
     return (product.productName.toLowerCase().includes(inputValue.toLowerCase()));
-  })
+  });
+
 
   const addProductToCart = (product) => {
-    const newProduct = { ...product }
+    const newProduct = {
+      ...product,
+      count: 1,
+    }
     setProductsInCart([...productsInCart, newProduct]);
   }
 
   useEffect(() => {
+    localStorage.setItem("shopping-cart", JSON.stringify(productsInCart))
+  }, [productsInCart]);
+
+  useEffect(() => {
     sendGetRequest(`http://localhost:3001/${category}`);
-  }, [category])
+  }, [category]);
 
   return (
     <>

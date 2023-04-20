@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
@@ -33,15 +33,21 @@ export default function ShoppingCart(props) {
     setIconVisible(false);
   };
 
+  const updateLocalStorage = () => {
+    localStorage.setItem("shopping-cart", JSON.stringify(props.products));
+  };
+
   const handleIncrement = (product) => {
     product.count += 1;
     setQuantity(product.count);
+    updateLocalStorage();
   };
 
   const handleDecrement = (product) => {
     if (product.count > 1) {
       product.count -= 1;
       setQuantity(product.count);
+      updateLocalStorage();
     }
   };
 
