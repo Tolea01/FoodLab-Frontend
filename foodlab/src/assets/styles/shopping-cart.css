@@ -72,6 +72,11 @@
   border-radius: 10px;
 }
 
+.empty-img {
+  width: 185px;
+  height: 180px;
+}
+
 
 
 /* ---------------------------------------------------------------------------------- */
@@ -97,5 +102,14 @@
 @media(max-width: 470px) {
   .cart-icon {
     margin-top: -10px;
+  }
+
+  .shopping-cart-orders {
+    font-size: 19px;
+    font-weight: normal;
+  }
+
+  .shopping-cart-price {
+    font-size: 17px;
   }
 }

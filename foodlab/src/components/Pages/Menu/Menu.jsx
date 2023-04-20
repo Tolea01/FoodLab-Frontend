@@ -99,7 +99,7 @@ export default function Menu() {
           </Col>
         </Row>
       </Container >
-      <ShoppingCart products={productsInCart} />
+      <ShoppingCart products={productsInCart} setProducts={setProductsInCart} />
     </>
   )
 }
