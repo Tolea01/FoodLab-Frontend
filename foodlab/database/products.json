@@ -5,8 +5,8 @@
       "productName": "Pizza peperoni",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/95/ec/c2/95ecc2e059692a2d7d7e40b15f8b211a.jpg",
-      "initialPrice": 13,
-      "discountedPrice": 10
+      "initialPrice": 10,
+      "previousPrice": 13
       
     },
     {
@@ -14,8 +14,8 @@
       "productName": "Burger",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/4d/5d/98/4d5d981b39836c44755b4f9414ab8de1.jpg",
-      "initialPrice": 7,
-      "discountedPrice": 5
+      "initialPrice": 5,
+      "previousPrice": 7
       
     },
     {
@@ -23,8 +23,8 @@
       "productName": "Steak",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/28/2e/22/282e222464666a3b7cb47b1ae41b44ad.jpg",
-      "initialPrice": 5,
-      "discountedPrice": 2
+      "initialPrice": 2,
+      "previousPrice": 5
       
     },
     {
@@ -32,8 +32,8 @@
       "productName": "Chicken Fajitas",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/c2/b4/0e/c2b40e2b19d0e75fd3cd158e14cf62f1.jpg",
-      "initialPrice": 14,
-      "discountedPrice": 10
+      "initialPrice": 10,
+      "previousPrice": 14
       
     },
     {
@@ -41,8 +41,8 @@
       "productName": "Pepperoni Calzone",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/b7/83/bf/b783bfc81ab8d8e18735b5b706999795.jpg",
-      "initialPrice": 10,
-      "discountedPrice": 8
+      "initialPrice": 8,
+      "previousPrice": 10
       
     },
     {
@@ -50,8 +50,8 @@
       "productName": "Fish and Chips",
       "productDescription": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse quidem fugit nobis assumenda debitis eos quam vel pariatur, consequuntur officiis molestias, ipsa optio reprehenderit aspernatur.",
       "productImage": "https://i.pinimg.com/564x/f3/e7/cc/f3e7cc62b5d13b70b1e333a3c5079e40.jpg",
-      "initialPrice": 12,
-      "discountedPrice": 9
+      "initialPrice": 9,
+      "previousPrice": 12
       
     }
   ],

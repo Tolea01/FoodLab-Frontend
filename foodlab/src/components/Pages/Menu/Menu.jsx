@@ -7,6 +7,7 @@ import Form from 'react-bootstrap/Form';
 import { BiSearch } from "react-icons/bi";
 import ProductCard from '../../Template/ProductCard';
 import PageHeader from '../../Template/PageHeader';
+import { useShoppingCart } from '../../../hooks/useShoppingCart';
 import ShoppingCart from '../../Template/ShoppingCart';
 import '../../../assets/styles/menu.css';
 
@@ -15,7 +16,7 @@ export default function Menu() {
   const [category, setCategory] = useState('Pizza');
   const [activeCategory, setActiveCategory] = useState(null);
   const [inputValue, setInputValue] = useState('');
-  const [productsInCart, setProductsInCart] = useState(JSON.parse(localStorage.getItem("shopping-cart")) || []);
+  const { productsInCart, setProductsInCart, addProductToCart } = useShoppingCart();
 
   const sendGetRequest = (link) => {
     axios
@@ -41,19 +42,6 @@ export default function Menu() {
   const filteredProducts = products.filter(product => {
     return (product.productName.toLowerCase().includes(inputValue.toLowerCase()));
   });
-
-
-  const addProductToCart = (product) => {
-    const newProduct = {
-      ...product,
-      count: 1,
-    }
-    setProductsInCart([...productsInCart, newProduct]);
-  }
-
-  useEffect(() => {
-    localStorage.setItem("shopping-cart", JSON.stringify(productsInCart))
-  }, [productsInCart]);
 
   useEffect(() => {
     sendGetRequest(`http://localhost:3001/${category}`);

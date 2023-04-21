@@ -8,10 +8,13 @@ import ProductCard from '../../../Template/ProductCard';
 import hTag from '../../../../assets/img/h-tag.png';
 import leftLine from '../../../../assets/img/y-left-s.png';
 import rightLine from '../../../../assets/img/y-right-s.png';
+import { useShoppingCart } from '../../../../hooks/useShoppingCart';
+import ShoppingCart from '../../../Template/ShoppingCart';
 import '../../../../assets/styles/menu-section.css';
 
 export default function MenuSection() {
   const [products, setProducts] = useState([]);
+  const { productsInCart, setProductsInCart, addProductToCart } = useShoppingCart();
 
   useEffect(() => {
     axios
@@ -51,8 +54,9 @@ export default function MenuSection() {
                   <ProductCard
                     cardTitle={product.productName}
                     productImage={product.productImage}
-                    oldPrice={product.initialPrice + '$'}
-                    price={product.discountedPrice + '$'}
+                    oldPrice={product.previousPrice + '$'}
+                    price={product.initialPrice + '$'}
+                    addProduct={() => addProductToCart(product)}
                     saleIcon='true' />
                 </Col>
               )
@@ -60,6 +64,8 @@ export default function MenuSection() {
           }
         </Row>
       </Container>
+      <ShoppingCart products={productsInCart} setProducts={setProductsInCart} />
     </section>
+
   )
 }
