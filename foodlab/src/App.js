@@ -9,7 +9,7 @@ import Menu from './components/Pages/Menu/Menu';
 import Contact from './components/Pages/Contact us/Contact';
 import Navbar from './components/Template/Navbar';
 import Footer from './components/Template/Footer';
-// import ShoppingCart from './components/Template/ShoppingCart';
+import Search from './components/Pages/Search Page/Search';
 
 export default function App() {
   return (
@@ -22,9 +22,9 @@ export default function App() {
         <Route path="services" element={<Services />} />
         <Route path="menu" element={<Menu />} />
         <Route path="contacts" element={<Contact />} />
+        <Route path="search" element={<Search />} />
       </Routes>
       <Footer />
-      {/* <ShoppingCart /> */}
     </BrowserRouter>
   );
 }
