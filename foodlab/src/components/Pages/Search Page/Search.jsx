@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
+import { useShoppingCart } from '../../../hooks/useShoppingCart';
+import ShoppingCart from '../../Template/ShoppingCart';
 import PageHeader from '../../Template/PageHeader';
 import ProductCard from '../../Template/ProductCard';
 import Row from 'react-bootstrap/Row';
@@ -13,6 +15,7 @@ export default function Search() {
   const location = useLocation();
   const [products, setProducts] = useState([]);
   const searchValue = decodeURIComponent(location.search.replace('?', '')).replace('%', '');
+  const { productsInCart, setProductsInCart, addProductToCart } = useShoppingCart();
 
   useEffect(() => {
     axios
@@ -45,6 +48,7 @@ export default function Search() {
                         cardDescription={product.productDescription}
                         productImage={product.productImage}
                         price={product.initialPrice + '$'}
+                        addProduct={() => addProductToCart(product)}
                       />
                     </Col>
                   )
@@ -52,6 +56,7 @@ export default function Search() {
             }
           </Row>
         </Container>
+        <ShoppingCart products={productsInCart} setProducts={setProductsInCart} />
       </section>
     </>
   )
