@@ -11,6 +11,7 @@ import { BsTrash } from "react-icons/bs";
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Image from 'react-bootstrap/Image';
+import ShoppingCartModal from './ShoppingCartModal';
 import emptyShoppingCart from '../../assets/img/empty-cart.svg';
 import '../../assets/styles/shopping-cart.css';
 
@@ -18,6 +19,7 @@ export default function ShoppingCart(props) {
   const [iconVisible, setIconVisible] = useState(true);
   const [show, setShow] = useState(false);
   const [quantity, setQuantity] = useState(1);
+  const [modalActive, setModalActive] = useState(false);
 
   const productsPrice = props.products.reduce((totalPrice, product) => {
     return totalPrice + (product.initialPrice * product.count);
@@ -79,7 +81,7 @@ export default function ShoppingCart(props) {
               Total: <b>{productsPrice.toFixed(2) + '$'}</b>
             </div>
             <div>
-              <Button className='shopping-cart-button ms-3 px-4 d-none d-md-block' variant="warning">Buy</Button>
+              <Button className='shopping-cart-button ms-3 px-4 d-none d-md-block text-white' variant="warning" onClick={() => setModalActive(true)}>Buy</Button>
               <div className='d-block d-md-none h-100 ms-2'>
                 <BsFillCartFill className='fs-3 color-yellow' />
               </div>
@@ -132,6 +134,7 @@ export default function ShoppingCart(props) {
 
         </Row>
       </Container>
+      <ShoppingCartModal show={modalActive} close={() => setModalActive(false)} />
     </div >
   )
 }
