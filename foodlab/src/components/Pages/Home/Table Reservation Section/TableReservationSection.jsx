@@ -88,7 +88,7 @@ export default function TableReservationSection() {
                 {renderInputs('number', 'input your number', 'Person')}
                 {renderInputs('date', 'input date', 'Date')}
                 <Row>
-                  <Button className='inputs-button p-3' size='lg' variant="primary" type='button'>Book Now!</Button>
+                  <Button className='inputs-button p-3 border-0' size='lg' variant="primary" type='button'>Book Now!</Button>
                 </Row>
               </Col>
             </Row>

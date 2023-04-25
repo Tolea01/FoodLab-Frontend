@@ -110,7 +110,7 @@ export default function ContactDetails() {
               <Row>
                 <Col>
                   <Button
-                    className='inputs-button p-3'
+                    className='inputs-button border-0 p-3'
                     size='lg'
                     variant="primary"
                     type='button'>
