@@ -1,0 +1,11 @@
+.personal-login-page {
+  padding: 10% 0 17% 0;
+  background-image: url(../img/bg-food.png);
+  background-size: contain;
+}
+
+@media(min-width: 992px) {
+  .login {
+    width: 50% !important;
+  }
+}
