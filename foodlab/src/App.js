@@ -10,6 +10,7 @@ import Navbar from './components/Template/Navbar';
 import Footer from './components/Template/Footer';
 import Search from './components/Pages/Search Page/Search';
 import PersonalLoginPage from './components/Pages/Personal Login Page/PersonalLoginPage';
+import DashboardPage from './components/Pages/Dashboard Page/DashboardPage';
 
 export default function App() {
   const renderRoute = (routePath, component) => {
@@ -37,8 +38,8 @@ export default function App() {
         {renderRoute('menu', <Menu />)}
         {renderRoute('contacts', <Contact />)}
         {renderRoute('search', <Search />)}
-
         <Route path='personal-page' element={<PersonalLoginPage />} />
+        <Route path='dashboard' element={<DashboardPage />} />
       </Routes>
     </BrowserRouter>
   );
