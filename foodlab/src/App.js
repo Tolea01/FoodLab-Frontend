@@ -1,7 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './components/Template/Layout';
 import Home from './components/Pages/Home/Home';
 import About from './components/Pages/About us/About';
 import Services from './components/Pages/Services/Services';
@@ -13,20 +12,34 @@ import Search from './components/Pages/Search Page/Search';
 import PersonalLoginPage from './components/Pages/Personal Login Page/PersonalLoginPage';
 
 export default function App() {
+  const renderRoute = (routePath, component) => {
+    return (
+      <Route
+        path={routePath}
+        index
+        element={
+          <>
+            <Navbar />
+            {component}
+            <Footer />
+          </>
+        }
+      />
+    );
+  };
+
   return (
     <BrowserRouter>
-      <Navbar />
       <Routes>
-        <Route path="/" element={<Layout />} />
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="services" element={<Services />} />
-        <Route path="menu" element={<Menu />} />
-        <Route path="contacts" element={<Contact />} />
-        <Route path="search" element={<Search />} />
-        <Route path="personal-page" element={<PersonalLoginPage />} />
+        {renderRoute('/', <Home />)}
+        {renderRoute('about', <About />)}
+        {renderRoute('services', <Services />)}
+        {renderRoute('menu', <Menu />)}
+        {renderRoute('contacts', <Contact />)}
+        {renderRoute('search', <Search />)}
+
+        <Route path='personal-page' element={<PersonalLoginPage />} />
       </Routes>
-      <Footer />
     </BrowserRouter>
   );
 }
