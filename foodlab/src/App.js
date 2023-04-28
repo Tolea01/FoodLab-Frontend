@@ -39,7 +39,7 @@ export default function App() {
         {renderRoute('contacts', <Contact />)}
         {renderRoute('search', <Search />)}
         <Route path='personal-page' element={<PersonalLoginPage />} />
-        <Route path='dashboard' element={<DashboardPage />} />
+        <Route path='dashboard/:id' element={<DashboardPage />} />
       </Routes>
     </BrowserRouter>
   );

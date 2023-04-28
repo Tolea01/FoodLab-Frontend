@@ -19,6 +19,7 @@ export default function PersonalLoginPage() {
       setDisplayError(true);
     } else {
       setDisplayError(false)
+      window.location.replace(`dashboard/${Math.floor(Math.random() * 100)}`)
     }
   }
 
