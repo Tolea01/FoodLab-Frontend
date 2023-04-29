@@ -14,14 +14,13 @@ export default function PersonalLoginPage() {
 
   const states = [username, password];
 
-  const handleLoginButton = () => {
-    if (states.some(state => state.trim() === '') || states.some(state => state !== 'admin')) {
+  const handleRegistration = (event) => {
+    const isValid = states.every(state => state.trim() !== '' && state === 'admin');
+    isValid ?
+      window.location.replace(`dashboard/${Math.floor(Math.random() * 100)}`) :
       setDisplayError(true);
-    } else {
-      setDisplayError(false)
-      window.location.replace(`dashboard/${Math.floor(Math.random() * 100)}`)
-    }
   }
+
 
   return (
     <section className="personal-login-page">
@@ -40,6 +39,7 @@ export default function PersonalLoginPage() {
               <Form.Control type="password"
                 placeholder="Password"
                 value={password}
+                onKeyDown={handleRegistration}
                 onInput={(event) => setPassword(event.target.value)} />
             </FloatingLabel>
 
@@ -51,7 +51,7 @@ export default function PersonalLoginPage() {
               <Button className='inputs-button p-3 border-0'
                 size='lg' variant="primary"
                 type='button'
-                onClick={handleLoginButton}
+                onClick={handleRegistration}
               >Login</Button>
             </Row>
           </Col>
