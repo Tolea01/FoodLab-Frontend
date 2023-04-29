@@ -21,7 +21,6 @@ export default function PersonalLoginPage() {
       setDisplayError(true);
   }
 
-
   return (
     <section className="personal-login-page">
       <Container className='d-flex justify-content-center'>
