@@ -1,0 +1,7 @@
+.dashboard-page {
+  width: 100vw;
+  height: 100vh;
+  padding: 7% 0 17% 0;
+  background-image: url(../img/bg-food.png);
+  background-size: contain;
+}
