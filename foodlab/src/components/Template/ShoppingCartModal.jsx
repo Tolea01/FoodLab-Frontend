@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
+import axios from 'axios';
 import '../../assets/styles/shopping-cart-modal.css';
 
 export default function (props) {
@@ -11,9 +12,36 @@ export default function (props) {
   const [phoneInputField, setPhoneInputField] = useState('');
   const [displayError, setDisplayError] = useState(false);
 
+  const products = JSON.parse(localStorage.getItem('shopping-cart'));
   const states = [nameInputField, emailInputField, addressInputField, phoneInputField];
   const regex = /^[^0-9+\-*.\/]*$/;
   const emailRegex = /^\S+@\S+\.\S+$/;
+
+  const responseSentSuccessfully = (response) => {
+    if (response.status === 201) {
+      alert('Your order has been completed successfully!');
+      localStorage.clear();
+      window.location.reload();
+    } else {
+      alert('Server error, try again');
+    }
+  }
+
+  const sendPostRequest = () => {
+    axios
+      .post('http://localhost:3003/orders',
+        {
+          "Name and Surname": nameInputField,
+          "Email Adress": emailInputField,
+          "Address": addressInputField,
+          "Phone Number": phoneInputField,
+          "Products": products.map(product => `${product.productName}(${product.count})`),
+          "Total Price": props.totalPrice + '$'
+        }
+      )
+      .then(response => responseSentSuccessfully(response))
+      .catch(err => console.log(err));
+  }
 
   const addInput = (type, label, placeholder, state, setState) => {
     return (
@@ -35,12 +63,15 @@ export default function (props) {
       setDisplayError(true);
     } else if (!emailRegex.test(emailInputField) || !regex.test(nameInputField)) {
       setDisplayError(true);
+    } else if (products.length === 0) {
+      alert('Error, the shopping cart is empty');
+      window.location.reload();
     } else {
       setDisplayError(false);
+      sendPostRequest();
     }
 
   };
-
 
   return (
     <Modal show={props.show} onHide={props.close}>

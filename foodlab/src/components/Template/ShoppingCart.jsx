@@ -134,7 +134,11 @@ export default function ShoppingCart(props) {
 
         </Row>
       </Container>
-      <ShoppingCartModal show={modalActive} close={() => setModalActive(false)} />
+      <ShoppingCartModal
+        show={modalActive}
+        close={() => setModalActive(false)}
+        totalPrice={productsPrice}
+      />
     </div >
   )
 }
