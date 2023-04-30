@@ -33,6 +33,18 @@ export default function TableReservationSection() {
     { bottom: 0, right: 0 },
   ];
 
+  const reloadPage = () => window.location.reload();
+
+  const responseSentSuccessfully = (response) => {
+    if (response.status === 201) {
+      alert('You have successfully reserved your place!');
+      reloadPage();
+    } else {
+      alert('Server error, try again');
+      reloadPage();
+    }
+  }
+
   const renderInputs = (typeOfInput, placeholder, text, state, setState) => {
     return (
       <Form.Floating className="mb-4">
@@ -49,6 +61,21 @@ export default function TableReservationSection() {
     )
   }
 
+  const sendPostRequest = () => {
+    axios
+      .post('http://localhost:3003/tableReservation',
+        {
+          "Name": name,
+          "Phone number": phone,
+          "Party Type": partyType,
+          "Number of Person": numberOfPerson,
+          "Date": date
+        }
+      )
+      .then(response => responseSentSuccessfully(response))
+      .catch(err => console.log(err))
+  }
+
   const handleBookButton = () => {
     if (states.some(state => state.trim().length === 0) || !regex.test(name) || new Date(date) < new Date()) {
       setDisplayError(true);
@@ -56,10 +83,9 @@ export default function TableReservationSection() {
       setDisplayError(true);
     } else {
       setDisplayError(false);
+      sendPostRequest();
     }
   };
-
-
 
   return (
     <Container fluid>
