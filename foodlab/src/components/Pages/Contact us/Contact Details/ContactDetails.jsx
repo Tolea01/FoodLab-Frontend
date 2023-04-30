@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
@@ -9,9 +9,21 @@ import { AiOutlinePhone } from 'react-icons/ai';
 import { AiOutlineMail } from 'react-icons/ai';
 import { AiOutlineEnvironment } from 'react-icons/ai';
 import RotatedImage from '../../../Template/RotatedImage';
+import axios from 'axios';
 import '../../../../assets/styles/contact-details.css';
 
 export default function ContactDetails() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [displayError, setDisplayError] = useState(false);
+
+  const states = [name, email, phone, subject, message];
+  const regex = /^[^0-9+\-*.\/]*$/;
+  const emailRegex = /^\S+@\S+\.\S+$/;
+  const reloadPage = () => window.location.reload();
   const contactDetailsCard = [
     {
       title: 'Phone',
@@ -30,18 +42,56 @@ export default function ContactDetails() {
     },
   ]
 
-  const renderInputs = (typeOfInput, placeholder, text) => {
+  const renderInputs = (typeOfInput, placeholder, text, state, setState) => {
     return (
       <Form.Floating className="mb-4">
         <Form.Control
           id="floatingInputCustom"
           type={typeOfInput}
           placeholder={placeholder}
+          value={state}
+          onChange={setState}
           className='contact-details-inputs'
         />
         <label className='inputs-text' htmlFor="floatingInputCustom">{text}</label>
       </Form.Floating>
     )
+  }
+
+  const responseSentSuccessfully = (response) => {
+    if (response.status === 201) {
+      alert('Your message has been sent successfully!');
+      reloadPage();
+    } else {
+      alert('Server error, try again');
+      reloadPage();
+    }
+  }
+
+  const sendPostRequest = () => {
+    axios
+      .post('http://localhost:3003/messages',
+        {
+          "Name": name,
+          "Email": email,
+          "Phone": phone,
+          "Subject": subject,
+          "Message": message
+        }
+      )
+      .then(response => responseSentSuccessfully(response))
+      .catch(err => console.log(err))
+  }
+
+  const handleSendMessage = () => {
+    if (states.some(state => state.trim().length === 0 || !regex.test(name) || !emailRegex.test(email))) {
+      setDisplayError(true)
+    } else if (name.length < 4 || phone.length < 6) {
+      setDisplayError(true)
+    } else {
+      setDisplayError(false)
+      sendPostRequest();
+    }
   }
 
   return (
@@ -78,19 +128,47 @@ export default function ContactDetails() {
 
               <Row>
                 <Col>
-                  {renderInputs('text', 'Name', 'Name')}
+                  {
+                    renderInputs(
+                      'text',
+                      'Name',
+                      'Name',
+                      name,
+                      (event) => setName(event.target.value))
+                  }
                 </Col>
                 <Col>
-                  {renderInputs('text', 'Email', 'Email')}
+                  {
+                    renderInputs(
+                      'text',
+                      'Email',
+                      'Email',
+                      email,
+                      (event) => setEmail(event.target.value))
+                  }
                 </Col>
               </Row>
 
               <Row>
                 <Col>
-                  {renderInputs('number', 'Phone', 'Phone')}
+                  {
+                    renderInputs(
+                      'number',
+                      'Phone',
+                      'Phone',
+                      phone,
+                      (event) => setPhone(event.target.value))
+                  }
                 </Col>
                 <Col>
-                  {renderInputs('text', 'Subject', 'Subject')}
+                  {
+                    renderInputs(
+                      'text',
+                      'Subject',
+                      'Subject',
+                      subject,
+                      (event) => setSubject(event.target.value))
+                  }
                 </Col>
               </Row>
 
@@ -102,6 +180,8 @@ export default function ContactDetails() {
                       placeholder="Leave a comment here"
                       style={{ height: '100px' }}
                       className='contact-details-textarea'
+                      value={message}
+                      onChange={(event) => setMessage(event.target.value)}
                     />
                   </FloatingLabel>
                 </Col>
@@ -109,10 +189,16 @@ export default function ContactDetails() {
 
               <Row>
                 <Col>
+                  <div
+                    className='mb-2 text-danger'
+                    style={{ display: displayError ? 'block' : 'none' }}>
+                    Please ensure that all input fields are filled out correctly.
+                  </div>
                   <Button
                     className='inputs-button border-0 p-3'
                     size='lg'
                     variant="primary"
+                    onClick={handleSendMessage}
                     type='button'>
                     Send Message
                   </Button>
