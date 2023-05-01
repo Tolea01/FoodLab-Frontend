@@ -11,20 +11,21 @@ import '../../../assets/styles/dashboard-page.css';
 export default function DashboardPage() {
   const [selectedValue, setSelectedValue] = useState('');
   const [serverData, setServerData] = useState([]);
+  const serverError = () => alert('Server Error');
 
   useEffect(() => {
     if (selectedValue.length === 0 || selectedValue === 'Select the data') return;
     axios
       .get(`http://localhost:3003/${selectedValue}`)
       .then(response => setServerData(response.data))
-      .catch(err => console.log(err))
+      .catch(() => serverError())
   }, [selectedValue, serverData]);
 
   const handleDeleteProduct = (productId) => {
     axios
       .delete(`http://localhost:3003/${selectedValue}/${productId}`)
-      .then(response => response.status === 200 ? alert('data has been deleted successfully!') : alert('Server Error'))
-      .catch(() => alert('Server Error!'));
+      .then(response => response.status === 200 ? alert('data has been deleted successfully!') : serverError())
+      .catch(() => serverError());
   }
 
   return (
