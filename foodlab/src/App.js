@@ -37,7 +37,7 @@ export default function App() {
         {renderRoute('services', <Services />)}
         {renderRoute('menu', <Menu />)}
         {renderRoute('contacts', <Contact />)}
-        {renderRoute('search', <Search />)}
+        {renderRoute('search/:searchValue', <Search />)}
         <Route path='personal-page' element={<PersonalLoginPage />} />
         <Route path='dashboard/:id' element={<DashboardPage />} />
       </Routes>

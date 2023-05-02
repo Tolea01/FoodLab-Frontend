@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useShoppingCart } from '../../../hooks/useShoppingCart';
 import ShoppingCart from '../../Template/ShoppingCart';
 import PageHeader from '../../Template/PageHeader';
@@ -10,12 +9,12 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import searchIcon from '../../../assets/img/searchIcon.png';
+import axios from 'axios';
 
 export default function Search() {
-  const location = useLocation();
   const [products, setProducts] = useState([]);
-  const searchValue = decodeURIComponent(location.search.replace('?', '')).replace('%', '');
   const { productsInCart, setProductsInCart, addProductToCart } = useShoppingCart();
+  const { searchValue } = useParams();
 
   useEffect(() => {
     axios

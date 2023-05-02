@@ -16,13 +16,13 @@ export default function Slider() {
     }
 
     if (event.key === 'Enter') {
-      window.location.href = `/search?${inputValue}`;
+      window.location.href = `/search/${inputValue}`;
     }
   }
 
   const handleButtonClick = () => {
     if (inputValue === '') return;
-    window.location.href = `/search?${inputValue}`;
+    window.location.href = `/search/${inputValue}`;
   }
 
   return (
