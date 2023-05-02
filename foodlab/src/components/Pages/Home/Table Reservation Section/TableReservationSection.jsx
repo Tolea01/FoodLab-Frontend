@@ -12,7 +12,7 @@ import imgPlate1 from '../../../../assets/img/c-1.png';
 import imgPlate2 from '../../../../assets/img/c-4.png';
 import imgPlate3 from '../../../../assets/img/c-5.png';
 import imgPlate4 from '../../../../assets/img/c-6.png';
-import axios from 'axios';
+import { sendPostRequest } from '../../../../functions/sendPostRequest';
 import '../../../../assets/styles/table-reservation-section.css';
 
 export default function TableReservationSection() {
@@ -32,15 +32,19 @@ export default function TableReservationSection() {
     { bottom: 0, left: 0 },
     { bottom: 0, right: 0 },
   ];
+  const postData = {
+    "Name": name,
+    "Phone number": phone,
+    "Party Type": partyType,
+    "Number of Person": numberOfPerson,
+    "Date": date
+  };
 
   const reloadPage = () => window.location.reload();
 
   const responseSentSuccessfully = (response) => {
     if (response.status === 201) {
       alert('You have successfully reserved your place!');
-      reloadPage();
-    } else {
-      alert('Server error, try again');
       reloadPage();
     }
   }
@@ -61,21 +65,6 @@ export default function TableReservationSection() {
     )
   }
 
-  const sendPostRequest = () => {
-    axios
-      .post('http://localhost:3003/tableReservation',
-        {
-          "Name": name,
-          "Phone number": phone,
-          "Party Type": partyType,
-          "Number of Person": numberOfPerson,
-          "Date": date
-        }
-      )
-      .then(response => responseSentSuccessfully(response))
-      .catch(err => console.log(err))
-  }
-
   const handleBookButton = () => {
     if (states.some(state => state.trim().length === 0) || !regex.test(name) || new Date(date) < new Date()) {
       setDisplayError(true);
@@ -83,7 +72,7 @@ export default function TableReservationSection() {
       setDisplayError(true);
     } else {
       setDisplayError(false);
-      sendPostRequest();
+      sendPostRequest('http://localhost:3003/tableReservation', postData, responseSentSuccessfully);
     }
   };
 
@@ -131,7 +120,7 @@ export default function TableReservationSection() {
                 }
                 {
                   renderInputs(
-                    'text',
+                    'number',
                     'input your phone',
                     'Phone',
                     phone,
