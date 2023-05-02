@@ -9,7 +9,7 @@ import { AiOutlinePhone } from 'react-icons/ai';
 import { AiOutlineMail } from 'react-icons/ai';
 import { AiOutlineEnvironment } from 'react-icons/ai';
 import RotatedImage from '../../../Template/RotatedImage';
-import axios from 'axios';
+import { sendPostRequest } from '../../../../functions/sendPostRequest';
 import '../../../../assets/styles/contact-details.css';
 
 export default function ContactDetails() {
@@ -40,7 +40,14 @@ export default function ContactDetails() {
       contact: 'AT&T Software LLC, 4500 Mercantile plaza',
       img: <AiOutlineEnvironment className='fs-2' />
     },
-  ]
+  ];
+  const postData = {
+    "Name": name,
+    "Email": email,
+    "Phone": phone,
+    "Subject": subject,
+    "Message": message
+  };
 
   const renderInputs = (typeOfInput, placeholder, text, state, setState) => {
     return (
@@ -62,25 +69,7 @@ export default function ContactDetails() {
     if (response.status === 201) {
       alert('Your message has been sent successfully!');
       reloadPage();
-    } else {
-      alert('Server error, try again');
-      reloadPage();
     }
-  }
-
-  const sendPostRequest = () => {
-    axios
-      .post('http://localhost:3003/messages',
-        {
-          "Name": name,
-          "Email": email,
-          "Phone": phone,
-          "Subject": subject,
-          "Message": message
-        }
-      )
-      .then(response => responseSentSuccessfully(response))
-      .catch(err => console.log(err))
   }
 
   const handleSendMessage = () => {
@@ -90,7 +79,7 @@ export default function ContactDetails() {
       setDisplayError(true)
     } else {
       setDisplayError(false)
-      sendPostRequest();
+      sendPostRequest('http://localhost:3003/messages', postData, responseSentSuccessfully);
     }
   }
 
