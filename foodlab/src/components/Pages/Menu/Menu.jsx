@@ -39,7 +39,9 @@ export default function Menu() {
     Object.entries(products).find(([key, value]) => {
       if (key === searchValue) {
         setProductCategory(value);
+        return true;
       }
+      return false;
     })
   }
 
