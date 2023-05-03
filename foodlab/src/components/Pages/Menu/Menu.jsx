@@ -36,12 +36,11 @@ export default function Menu() {
   };
 
   const searchProduct = (searchValue) => {
-    for (const [key, value] of Object.entries(products)) {
+    Object.entries(products).find(([key, value]) => {
       if (key === searchValue) {
         setProductCategory(value);
-        break;
       }
-    }
+    })
   }
 
   const categoryClick = (categoryName) => {
