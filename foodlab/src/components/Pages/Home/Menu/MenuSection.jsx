@@ -18,9 +18,9 @@ export default function MenuSection() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3001/discounts')
-      .then(productsData => setProducts(productsData.data))
-      .catch(err => console.log(err))
+      .get('http://localhost:3001/products')
+      .then(productsData => setProducts(productsData.data.discounts))
+      .catch(err => console.log(err));
   }, [])
 
   return (
