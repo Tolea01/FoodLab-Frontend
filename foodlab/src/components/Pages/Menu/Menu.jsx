@@ -13,57 +13,39 @@ import '../../../assets/styles/menu.css';
 
 export default function Menu() {
   const [products, setProducts] = useState([]);
-  const [productCategory, setProductCategory] = useState([]);
   const [category, setCategory] = useState('Pizza');
-  const [activeCategory, setActiveCategory] = useState(null);
+  const [activeCategory, setActiveCategory] = useState(category);
   const [inputValue, setInputValue] = useState('');
   const { productsInCart, setProductsInCart, addProductToCart } = useShoppingCart();
-
-  useEffect(() => {
-    sendGetRequest('http://localhost:3001/products');
-    setActiveCategory(category);
-  }, []);
-
-  useEffect(() => {
-    searchProduct(category);
-  }, [products]);
 
   const sendGetRequest = (link) => {
     axios
       .get(link)
-      .then(productsData => setProducts(productsData.data))
-      .catch(() => alert('Server Error!'));
+      .then(productsData => setProducts(productsData.data[category]))
+      .catch(error => console.log(error));
   };
-
-  const searchProduct = (searchValue) => {
-    Object.entries(products).find(([key, value]) => {
-      if (key === searchValue) {
-        setProductCategory(value);
-        return true;
-      }
-      return false;
-    })
-  }
 
   const categoryClick = (categoryName) => {
     setCategory(categoryName);
     setActiveCategory(categoryName);
-    searchProduct(categoryName);
   };
 
   const categoryList = (categoryName) => {
     return (
       <li
         className={activeCategory === categoryName ? 'active-category' : ''}
-        onClick={() => categoryClick(categoryName)}>
-        {categoryName}
+        onClick={() => categoryClick(categoryName)}>{categoryName}
       </li>
     )
   };
 
-  const filteredProducts = productCategory.filter(product => {
+  const filteredProducts = products.filter(product => {
     return (product.productName.toLowerCase().includes(inputValue.toLowerCase()));
   });
+
+  useEffect(() => {
+    sendGetRequest(`http://localhost:3001/products`);
+  }, [category]);
 
   return (
     <>
