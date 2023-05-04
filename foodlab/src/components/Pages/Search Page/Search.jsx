@@ -18,11 +18,28 @@ export default function Search() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3002/allProducts')
+      .get('http://localhost:3001/products')
       .then(productsData => setProducts(productsData.data))
+      .catch(() => alert('Server Error!'))
   }, []);
 
-  const filteredProducts = products.filter((product) => {
+  const getAllProducts = () => {
+    let allProducts = [];
+
+    for (const productCategory of Object.values(products)) {
+      if (typeof productCategory === 'object') {
+        for (const products of productCategory) {
+          allProducts.push(products);
+        }
+      }
+    }
+
+    return allProducts;
+  }
+
+  const allProducts = getAllProducts();
+
+  const filteredProducts = allProducts.filter((product) => {
     return (product.productName.toLowerCase().includes(searchValue.toLowerCase()))
   });
 
