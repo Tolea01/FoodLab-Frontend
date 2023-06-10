@@ -10,6 +10,7 @@ import leftLine from '../../../../assets/img/y-left-s.png';
 import rightLine from '../../../../assets/img/y-right-s.png';
 import { useShoppingCart } from '../../../../hooks/useShoppingCart';
 import ShoppingCart from '../../../Template/ShoppingCart';
+import { productsData } from '../../../../data/data';
 import '../../../../assets/styles/menu-section.css';
 
 export default function MenuSection() {
@@ -20,7 +21,7 @@ export default function MenuSection() {
     axios
       .get('http://localhost:3001/products')
       .then(productsData => setProducts(productsData.data.discounts))
-      .catch(err => console.log(err));
+      .catch(() => setProducts(productsData.discounts));
   }, [])
 
   return (

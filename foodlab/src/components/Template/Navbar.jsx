@@ -13,7 +13,9 @@ export default function NavBar() {
     <Navbar className='p-0 navbar color-white position-relative' expand='lg' fixed='top'>
       <Container className='p-0 h-100 container-lg' fluid>
         <Navbar.Brand className='h-100 ps-2 ps-md-5 navbar-brand' href='#home'>
-          <Image className='logo-img' src={logo} />
+          <Link to='/'>
+            <Image className='logo-img' src={logo} />
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle className='me-2' aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav' className='color-white px-1'>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useShoppingCart } from '../../../hooks/useShoppingCart';
+import { productsData } from '../../../data/data';
 import ShoppingCart from '../../Template/ShoppingCart';
 import PageHeader from '../../Template/PageHeader';
 import ProductCard from '../../Template/ProductCard';
@@ -20,7 +21,7 @@ export default function Search() {
     axios
       .get('http://localhost:3001/products')
       .then(productsData => setProducts(productsData.data))
-      .catch(() => alert('Server Error!'))
+      .catch(() => setProducts(productsData))
   }, []);
 
   const getAllProducts = () => {

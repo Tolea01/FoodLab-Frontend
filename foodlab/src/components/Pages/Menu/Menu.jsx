@@ -8,6 +8,7 @@ import { BiSearch } from "react-icons/bi";
 import ProductCard from '../../Template/ProductCard';
 import PageHeader from '../../Template/PageHeader';
 import { useShoppingCart } from '../../../hooks/useShoppingCart';
+import { productsData } from '../../../data/data';
 import ShoppingCart from '../../Template/ShoppingCart';
 import '../../../assets/styles/menu.css';
 
@@ -22,7 +23,7 @@ export default function Menu() {
     axios
       .get(link)
       .then(productsData => setProducts(productsData.data[category]))
-      .catch(error => console.log(error));
+      .catch(() => setProducts(productsData[category]));
   };
 
   const categoryClick = (categoryName) => {
